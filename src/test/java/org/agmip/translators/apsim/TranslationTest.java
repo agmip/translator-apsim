@@ -52,7 +52,7 @@ public class TranslationTest
             String JSON = reader.readLine();
             result = (LinkedHashMap<String, Object>) JSONAdapter.fromJSON(JSON);
 
-            Translator.writeFile("", result);
+            Translator.writeFile("src/test/resources/", result);
             //File file = new File("test.apsim");
             
             //assertTrue(file.exists());

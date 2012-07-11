@@ -3,6 +3,7 @@ package org.agmip.translators.apsim;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.logging.Level;
@@ -36,7 +37,12 @@ public class ApsimOutput implements TranslatorOutput {
         System.out.println(input.toString());
         
         Experiment experiment = new Experiment();
-        experiment.readFrom(input);
+        try {
+			experiment.readFrom(input);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         context.put( "experiment", experiment);
 
         // Write template.
@@ -44,7 +50,7 @@ public class ApsimOutput implements TranslatorOutput {
         FileWriter F;
         try {
             
-            F = new FileWriter("Test.apsim");
+            F = new FileWriter(new File(filePath,"Test.apsim"));
             template.merge( context, F );
             F.close();
             
