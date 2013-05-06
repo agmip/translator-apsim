@@ -5,6 +5,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.agmip.ace.LookupCodes;
 
 /**
  * @author Dean Holzworth, CSIRO
@@ -37,7 +38,10 @@ public class InitialCondition {
     private String cropCode = "?";
 
     // residueType
-    public String getResidueType() { return cropCode; } //Util.cropCodeToName(cropCode); }
+    public String getResidueType() { 
+        return LookupCodes.lookupCode("crid", cropCode, "common");
+        //return cropCode;
+    } //Util.cropCodeToName(cropCode); }
     
     // soilLayers
     @JsonProperty("soilLayer")

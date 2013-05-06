@@ -2,6 +2,7 @@ package org.agmip.translators.apsim.events;
 
 import org.agmip.translators.apsim.util.Util;
 import org.codehaus.jackson.annotate.JsonProperty;
+import org.agmip.ace.LookupCodes;
 
 /**
  * @author Ioannis N. Athanasiadis, DUTh
@@ -30,7 +31,7 @@ public class Planting extends Event{
         if ("?".equals(depth))
             return "?";
         else
-            return String.valueOf(Double.valueOf(depth) * 10.0);
+            return String.valueOf(Double.valueOf(depth));
     }
 
     // row spacing. units=cm
@@ -48,7 +49,10 @@ public class Planting extends Event{
     private String population = "?";
 
     // Crop Name
-    public String getCropName() {return Util.cropCodeToName(cropID);}
+    public String getCropName() {
+        return LookupCodes.lookupCode("crid", cropID, "common");
+        //return Util.cropCodeToName(cropID);
+    }
     
     @Override
     public String getApsimAction() {

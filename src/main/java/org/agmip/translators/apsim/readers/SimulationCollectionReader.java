@@ -112,10 +112,6 @@ public class SimulationCollectionReader extends VTDReader{
 			knownWeathers.put(shortname, weather);
 		}
 		sim.setWeatherID(shortname);
-
-
-
-
 		return sim;
 	}
 

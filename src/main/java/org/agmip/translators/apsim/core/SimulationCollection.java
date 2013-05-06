@@ -8,11 +8,10 @@ import org.codehaus.jackson.annotate.JsonProperty;
 public class SimulationCollection {
 	@JsonProperty("soils")
 	Collection<Soil> soils = new Vector<Soil>();
-	public Collection<Soil> getSoils() { return soils; }	
-
+	public Collection<Soil> getSoils() { return soils; }
 	@JsonProperty("weathers")
 	Collection<Weather> weathers = new Vector<Weather>();
-	public Collection<Weather> getWeathers() { return weathers; }	
+	public Collection<Weather> getWeathers() { return weathers; }
 
 	@JsonProperty("experiments")
 	Collection<SimulationRun> experiments = new Vector<SimulationRun>();
@@ -27,10 +26,10 @@ public class SimulationCollection {
 					if(mySoil.equals(soil.getID())){
 						sim.setSoil(soil);
 						break;
-					}	
+					}
 				}
-				
-			
+
+
 			String myWeather = sim.getWeatherID();
 			for (Weather w : weathers){
 				if(myWeather.equals(w.getId())){

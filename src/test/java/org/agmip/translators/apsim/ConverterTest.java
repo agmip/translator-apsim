@@ -38,6 +38,8 @@ public class ConverterTest extends TestCase{
         assertEquals("0.10", sim.getSoil().getSalb());
         assertEquals("18/03/1981", sim.getManagement().getEvents().get(0).getDate());
         assertEquals("0.12", sim.getSoil().getLayers()[0].getLowerLimit());
+        assertEquals("Maize", sim.getManagement().plantingCropName());
+        assertEquals("Maize", sim.getInitialCondition().getResidueType());
     }
 
     @Test
