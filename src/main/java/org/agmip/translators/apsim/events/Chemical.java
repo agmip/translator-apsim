@@ -1,5 +1,7 @@
 package org.agmip.translators.apsim.events;
 
+import org.agmip.translators.apsim.core.Management;
+
 /**
  * @author Ioannis N. Athanasiadis, DUTh
  * @author Dean Holzworth, CSIRO
@@ -14,7 +16,7 @@ public class Chemical extends Event {
     }
 
     @Override
-    public void initialise() {
+    public void initialise(Management management) {
         
     }
 

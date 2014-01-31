@@ -1,5 +1,7 @@
 package org.agmip.translators.apsim.events;
 
+import org.agmip.translators.apsim.core.Management;
+import org.agmip.translators.apsim.util.Util;
 import org.codehaus.jackson.annotate.JsonProperty;
 
 /**
@@ -25,10 +27,10 @@ public class Fertilizer extends Event {
     //private String potasium;
 
     @JsonProperty("fedep")
-    private String depth = "?";
+    private double depth = Util.missingValue;
 
     @JsonProperty("feamn")
-    private String nitrogen = "?";
+    private double nitrogen = Util.missingValue;
 
     @Override
     public String getApsimAction() {
@@ -41,21 +43,15 @@ public class Fertilizer extends Event {
     
     
     @Override
-    public void initialise() {
-        log = "";
+    public void initialise(Management management) {
         if ("?".equals(getDate()))
-            log += "  * Operation fertiliser ERROR: Date missing. '?' has been inserted\r\n";
+            log += "  * Operation fertiliser ERROR: Date missing (date).\r\n";
         
-        if ("?".equals(depth)) {
-            depth = "50";
-            log += "  * Operation " + getDate() + " ASSUMPTION: Fertiliser depth missing. A value of 50 mm has been assumed\r\n";
-        }
+        if (depth == Util.missingValue)
+        	log += "  * Operation " + getDate() + " ERROR: Fertiliser depth missing (fedep).\r\n";
         
-        if ("?".equals(nitrogen)) {
-            log += "  * Operation " + getDate() + " ERROR: Fertiliser nitrogen amount missing. A '?' has been inserted\r\n";
-        }        
-        
-        
+        if (nitrogen == Util.missingValue)
+            log += "  * Operation " + getDate() + " ERROR: Fertiliser nitrogen amount missing (feamn).\r\n";
     }
 	
 	

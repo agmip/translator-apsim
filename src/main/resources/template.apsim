@@ -1,4 +1,121 @@
-<folder version="32" name="simulations">
+<folder version="29" name="simulations">
+    <folder name="Soils">
+#foreach ($soil in $collection.soils)
+        <soil name="$soil.id">
+            <Comment type="multiedit" description="Comments">ICASA Classification: $soil.classification</Comment>
+            <ASC_Order description="Australian Soil Classification Order" />
+            <ASC_Sub-order description="Australian Soil Classification Sub-Order" />
+            <SoilType description="Soil description"/>
+            <LocalName/>
+            <Site>$soil.site</Site>
+            <NearestTown description="Nearest town"/>
+            <Region/>
+            <State />
+            <Country />
+            <NaturalVegetation description="Natural vegetation"/>
+            <ApsoilNumber description="Apsoil number" />
+            <Latitude description="Latitude (WGS84)">$soil.latitude</Latitude>
+            <Longitude>$soil.longitude</Longitude>
+            <LocationAccuracy description="Location accuracy" />
+            <DataSource type="multiedit" description="Data source">$soil.source</DataSource>
+            <Comments />
+            <Water>
+#foreach ($layer in $soil.layers)
+                <Layer>
+                    <Thickness units="mm">$layer.thickness</Thickness>
+                    <KS units="mm/day">#if ($layer.ksat != -99.999)$layer.ksat#end</KS>
+                    <BD units="g/cc">$layer.bulkDensity</BD>
+                    <AirDry units="mm/mm">$layer.airDry</AirDry>
+                    <LL15 units="mm/mm">$layer.lowerLimit</LL15>
+                    <DUL units="mm/mm">$layer.drainedUpperLimit</DUL>
+                    <SAT units="mm/mm">$layer.saturation</SAT>
+                </Layer>
+#end
+                <SoilCrop name="$soil.cropName">
+#foreach ($layer in $soil.layers)          
+                    <Layer>
+                        <Thickness units="mm">$layer.thickness</Thickness>
+                        <LL units="mm/mm">$layer.lowerLimit</LL>
+                        <KL units="/day">$layer.kl</KL>
+                        <XF units="0-1">1</XF>
+                    </Layer>
+#end
+                </SoilCrop>
+            </Water>
+            <SoilWat>
+                <SummerCona>$soil.cona</SummerCona>
+                <SummerU>$soil.sumU</SummerU>
+                <SummerDate>$soil.sumDate</SummerDate>
+                <WinterCona>$soil.cona</WinterCona>
+                <WinterU>$soil.winU</WinterU>
+                <WinterDate>$soil.winDate</WinterDate>
+                <DiffusConst>$soil.getDiffusConst()</DiffusConst>
+                <DiffusSlope>$soil.getDiffusSlope()</DiffusSlope>
+                <Salb>$soil.salb</Salb>
+                <Cn2Bare>$soil.cn2bare</Cn2Bare>
+                <CnRed>20</CnRed>
+                <CnCov>0.8</CnCov>
+                <Slope>
+                </Slope>
+                <DischargeWidth>
+                </DischargeWidth>
+                <CatchmentArea>
+                </CatchmentArea>
+                <MaxPond>
+                </MaxPond>
+#foreach ($layer in $soil.layers)             
+                <Layer>
+                    <Thickness units="mm">$layer.thickness</Thickness>
+                    <SWCON units="0-1">$soil.swcon</SWCON>
+                    <MWCON units="0-1" />
+                    <KLAT units="mm/d" />
+                </Layer>
+#end
+            </SoilWat>
+            <SoilOrganicMatter>
+                <RootCn>45</RootCn>  
+                <RootWt>500</RootWt>  
+                <SoilCn>14.5</SoilCn> 
+                <EnrACoeff>7.4</EnrACoeff>
+                <EnrBCoeff>0.2</EnrBCoeff>
+#foreach ($layer in $soil.layers)        
+                <Layer>                                            
+                    <Thickness units="mm">$layer.thickness</Thickness>                                                
+                    <OC units="Total %">#if( $layer.organicCarbon == 0 ) 0.1 #else $layer.organicCarbon #end</OC>
+                    <FBiom units="0-1">$layer.fbiom</FBiom>
+                    <FInert units="0-1">$layer.finert</FInert>
+                </Layer>
+#end
+            </SoilOrganicMatter>
+            <Analysis>
+#foreach ($layer in $soil.layers)        
+                <Layer>
+                    <Thickness units="mm">$layer.thickness</Thickness>
+                    <Rocks units="%" />
+                    <Texture/>
+                    <MunsellColour/>
+                    <EC units="1:5 dS/m"/>
+                    <PH units="1:5 water">$layer.ph</PH>
+                    <CL units="mg/kg" />
+                    <Boron units="Hot water mg/kg" />
+                    <CEC units="cmol+/kg" />
+                    <Ca units="cmol+/kg" />
+                    <Mg units="cmol+/kg" />
+                    <Na units="cmol+/kg" />
+                    <K units="cmol+/kg" />
+                    <ESP units="%" />
+                    <Mn units="mg/kg" />
+                    <Al units="cmol+/kg" />
+                    <ParticleSizeSand units="%" />
+                    <ParticleSizeSilt units="%" />
+                    <ParticleSizeClay units="%" />
+                </Layer>
+#end
+            </Analysis>           
+        </soil>    
+#end
+    </folder>
+
    #foreach ($simulation in $collection.experiments)
 	<simulation name="${simulation.getUniqueName()}">
 		<memo name="LOG">
@@ -15,117 +132,13 @@ $simulation.log
 		</metfile>
 		<summaryfile />
 		<area name="paddock">
-			<soil name="Soil">
-				<Comment type="multiedit" description="Comments">ICASA Classification: $simulation.soil.classification</Comment>
-				<ASC_Order description="Australian Soil Classification Order" />
-				<ASC_Sub-order description="Australian Soil Classification Sub-Order" />
-				<SoilType description="Soil description"/>
-				<LocalName/>
-				<Site>$simulation.soil.site</Site>
-				<NearestTown description="Nearest town"/>
-				<Region/>
-				<State />
-				<Country />
-				<NaturalVegetation description="Natural vegetation"/>
-				<ApsoilNumber description="Apsoil number" />
-				<Latitude description="Latitude (WGS84)">$simulation.soil.latitude</Latitude>
-				<Longitude>$simulation.soil.longitude</Longitude>
-				<LocationAccuracy description="Location accuracy" />
-				<DataSource type="multiedit" description="Data source">$simulation.soil.source</DataSource>
-				<Comments />
-				<Water>
-#foreach ($layer in $simulation.soil.layers)
-					<Layer>
-						<Thickness units="mm">$layer.thickness</Thickness>
-						<KS units="mm/day" />
-						<BD units="g/cc">$layer.bulkDensity</BD>
-						<AirDry units="mm/mm">$layer.airDry</AirDry>
-						<LL15 units="mm/mm">$layer.lowerLimit</LL15>
-						<DUL units="mm/mm">$layer.drainedUpperLimit</DUL>
-						<SAT units="mm/mm">$layer.saturation</SAT>
-					</Layer>
-#end
-					<SoilCrop name="$simulation.management.plantingCropName()">
-#foreach ($layer in $simulation.soil.layers)          
-						<Layer>
-							<Thickness units="mm">$layer.thickness</Thickness>
-							<LL units="mm/mm">$layer.lowerLimit</LL>
-							<KL units="/day">$layer.kl</KL>
-							<XF units="0-1">1</XF>
-						</Layer>
-#end
-					</SoilCrop>
-				</Water>
-				<SoilWat>
-					<SummerCona>3.5</SummerCona>
-					<SummerU>$simulation.soil.u</SummerU>
-               <SummerDate>1-Nov</SummerDate>
-					<WinterCona>3.5</WinterCona>
-					<WinterU>$simulation.soil.u</WinterU>
-               <WinterDate>1-Apr</WinterDate>
-					<DiffusConst>$simulation.soil.getDiffusConst()</DiffusConst>
-					<DiffusSlope>$simulation.soil.getDiffusSlope()</DiffusSlope>
-					<Salb>$simulation.soil.salb</Salb>
-					<Cn2Bare>$simulation.soil.cn2bare</Cn2Bare>
-					<CnRed>20</CnRed>
-					<CnCov>0.8</CnCov>
-					<Slope>
-					</Slope>
-					<DischargeWidth>
-					</DischargeWidth>
-					<CatchmentArea>
-					</CatchmentArea>
-					<MaxPond>
-					</MaxPond>
-#foreach ($layer in $simulation.soil.layers)             
-					<Layer>
-						<Thickness units="mm">$layer.thickness</Thickness>
-						<SWCON units="0-1">0.3</SWCON>
-						<MWCON units="0-1" />
-						<KLAT units="mm/d" />
-					</Layer>
-#end
-				</SoilWat>
-				<SoilOrganicMatter>
-					<RootCn>45</RootCn>  
-					<RootWt>500</RootWt>  
-					<SoilCn>14.5</SoilCn> 
-					<EnrACoeff>7.4</EnrACoeff>
-					<EnrBCoeff>0.2</EnrBCoeff>
-#foreach ($layer in $simulation.soil.layers)        
-					<Layer>                                            
-						<Thickness units="mm">$layer.thickness</Thickness>                                                
-						<OC units="Total %">#if( $layer.organicCarbon == 0 ) 0.1 #else $layer.organicCarbon #end</OC>
-						<FBiom units="0-1">$layer.fbiom</FBiom>
-						<FInert units="0-1">$layer.finert</FInert>
-					</Layer>
-#end
-				</SoilOrganicMatter>
-				<Analysis>
-#foreach ($layer in $simulation.soil.layers)        
-					<Layer>
-						<Thickness units="mm">$layer.thickness</Thickness>
-						<Rocks units="%" />
-						<Texture/>
-						<MunsellColour/>
-						<EC units="1:5 dS/m"/>
-						<PH units="1:5 water">$layer.ph</PH>
-						<CL units="mg/kg" />
-						<Boron units="Hot water mg/kg" />
-						<CEC units="cmol+/kg" />
-						<Ca units="cmol+/kg" />
-						<Mg units="cmol+/kg" />
-						<Na units="cmol+/kg" />
-						<K units="cmol+/kg" />
-						<ESP units="%" />
-						<Mn units="mg/kg" />
-						<Al units="cmol+/kg" />
-						<ParticleSizeSand units="%" />
-						<ParticleSizeSilt units="%" />
-						<ParticleSizeClay units="%" />
-					</Layer>
-#end
-				</Analysis>
+			<soil name="Soil" shortcut="/simulations/Soils/$simulation.soil.id">
+                <Water shortcut="/simulations/Soils/$simulation.soil.id/Water">
+                    <SoilCrop name="$simulation.management.plantingCropName()" shortcut="/simulations/Soils/$simulation.soil.id/Water/$simulation.management.plantingCropName()" />
+                </Water>
+                <SoilWat shortcut="/simulations/Soils/$simulation.soil.id/SoilWat" />
+                <SoilOrganicMatter shortcut="/simulations/Soils/$simulation.soil.id/SoilOrganicMatter" />
+                <Analysis shortcut="/simulations/Soils/$simulation.soil.id/Analysis" />
 				<Sample name="Initial nitrogen">
 					<Date type="date" description="Sample date:">$simulation.initialCondition.date</Date>
 #foreach ($initialLayer in $simulation.initialCondition.soilLayers)        
@@ -169,7 +182,10 @@ $simulation.log
             <ini>
                <filename>${simulation.management.plantingCropName()}.xml</filename>
             </ini>
-         </$simulation.management.plantingCropName()>
+            </$simulation.management.plantingCropName()>
+#if ($simulation.management.plantingCropName() == "millet")
+            <canopy name="Canopy"><intercrop type="text" description="Enter crop names to intercrop">millet millet1 millet2 millet3 millet4 millet5</intercrop></canopy>
+#end         
 			<folder name="Manager folder">
 				<operations name="Operations">
 #foreach ($event in $simulation.management.events)        
@@ -181,24 +197,133 @@ $simulation.log
 #end               
 #end        
 				</operations>
-<manager name="Harvesting rule"><ui><category type="category" description="Harvesting criteria" />
-                                    <crop type="crop" description="Enter name of crop to harvest when ripe : ">$simulation.management.plantingCropName()</crop></ui><script><text>if [crop].StageName = 'harvest_ripe'  or [crop].plant_status = 'dead' then
+#if ($simulation.management.plantingCropName() == "sugar")
+                <manager name="SUGAR management">
+                    <ui>
+                        <category type="category" description="Sugar plant crop management parameters" />
+                        <plantlen type="text" description="Duration of a plant crop (days) (30 days/month * 15 months) : ">450</plantlen>
+                        <category description="Ratoon management parameters" type="category" />
+                        <NoRatoons type="text" description="Number of ratoons (max = 5): ">4</NoRatoons>
+                        <ratoonlen type="text" description="Duration of a ratoon crop (days) (30 days/month * 13 months) : ">390</ratoonlen>
+                        <ratoon_stalks type="text" description="Stalk density of ratoon crop (/m2) :">10</ratoon_stalks>
+                    </ui>
+                    <script name="start_of_day">
+                    <text><![CDATA[
+                    ! -----------------------------------------------------------------
+                    ! Book keeping to round days to integer values
+                    plantlen = nearest_int(plantlen)
+                    ratoonlen = nearest_int(ratoonlen)
+
+                    if (sugar.crop_status = 'alive') then
+
+                       ! Set harvest dates for each crop phase
+                       if (sugar.DaysAfterSowing = [plantlen] and ratoon_no = 0) or
+                          (sugar.DaysAfterSowing = [ratoonlen] and ratoon_no > 0) then
+
+                          acmo do_output
+                          sugar harvest
+
+                          if (ratoon_no = [NoRatoons] + 1) then
+                             ! plough the crop out
+                             sugar kill_crop
+                             sugar end_crop
+
+                          else
+                             ! Set stalk density
+                             sugar.plants = [ratoon_stalks]
+                          endif
+                       else
+                          ! We have not reached the harvest date for this ratoon.
+                       endif
+
+                    elseif (sugar.crop_status = 'dead') then
+                       acmo do_output
+                       sugar harvest
+                       sugar end_crop
+
+                    endif
+                       ]]></text>
+                    <event>start_of_day</event>
+                    </script>
+                    <script name="init">
+                    <text>
+                    plantlen = 0
+                    ratoonlen = 0
+                    </text>
+                    <event>init</event>
+                    </script>
+                </manager>
+#elseif ($simulation.management.plantingCropName() == "millet")
+                <manager name="Harvesting rule">
+                    <ui>
+                        <category type="category" description="Harvesting criteria" />
+                        <crop type="crop" description="Enter name of crop to harvest when ripe : ">$simulation.management.plantingCropName()</crop>
+                    </ui>
+                    <script><text>if [crop].StageName = 'harvest_ripe'  or [crop].plant_status = 'dead' then
+   acmo do_output
+   [crop] harvest
+   [crop]1 harvest
+   [crop]2 harvest
+   [crop]3 harvest
+   [crop]4 harvest
+   [crop]5 harvest
+   [crop] end_crop
+   [crop]1 end_crop
+   [crop]2 end_crop
+   [crop]3 end_crop
+   [crop]4 end_crop
+   [crop]5 end_crop
+endif
+</text><event>end_of_day</event></script>
+                </manager>
+#elseif ($simulation.management.plantingCropName() == "cotton")
+                <manager name="Harvesting rule">
+                    <ui>
+                        <category type="category" description="Harvesting criteria" />
+                        <crop type="crop" description="Enter name of crop to harvest when ripe : ">$simulation.management.plantingCropName()</crop>
+                    </ui>
+                    <script><text>if (ozcot_status > 0) then
+     acmo do_output
+     $simulation.management.plantingCropName() harvest
+   endif
+</text><event>end_of_day</event></script>
+                </manager>
+#elseif ($simulation.management.plantingCropName() != "rice")        
+                <manager name="Harvesting rule">
+                    <ui>
+                        <category type="category" description="Harvesting criteria" />
+                        <crop type="crop" description="Enter name of crop to harvest when ripe : ">$simulation.management.plantingCropName()</crop>
+                    </ui>
+                    <script><text>if [crop].StageName = 'harvest_ripe'  or [crop].plant_status = 'dead' then
+   acmo do_output
    [crop] harvest
    [crop] end_crop
 endif
-</text><event>end_of_day</event></script></manager>
+</text><event>end_of_day</event></script>
+                </manager>
+#end
 			</folder>
 			<outputfile>
 				<filename output="yes">AgMIP.out</filename>
 				<title>AgMIP</title>
 				<variables name="Variables">
 					<variable name="dd/mm/yyyy as Date"></variable>
+#if ($simulation.management.plantingCropName() == "rice")
+					<variable name="wagt as biomass"></variable>
+					<variable name="wrr as yield"></variable>
+					<variable name="esw"></variable>
+					<variable name="rlai as lai"></variable>
+#elseif ($simulation.management.plantingCropName() == "cotton")
+					<variable name="dm"></variable>
+					<variable name="yield"></variable>
+					<variable name="esw"></variable>
+					<variable name="lai"></variable>
+#else
 					<variable name="biomass"></variable>
 					<variable name="yield"></variable>
-					<variable name="grain_protein"></variable>
-					<variable name="grain_size"></variable>
 					<variable name="esw"></variable>
-					<variable name="lai"></variable>		  
+					<variable name="lai"></variable>
+#end                    
 				</variables>
 				<events name="Reporting Frequency">
 					<event name="daily"></event>
@@ -222,8 +347,19 @@ endif
             <filename output="yes">MACH0001_1__1 ACMO.out</filename>
             <title>MACH0001_1__1 ACMO</title>
             <variables name="Variables">
+#if ($simulation.management.plantingCropName() == "millet")
+               <variable name="TotalYield as yield" />
+               <variable name="TotalBiomass as biomass" />
+#elseif ($simulation.management.plantingCropName() == "rice")
+               <variable name="wrr as yield" />
+               <variable name="wagt as biomass" />
+#elseif ($simulation.management.plantingCropName() == "cotton")
+               <variable name="yield" />
+               <variable name="dm as biomass" />
+#else               
                <variable name="yield" />
                <variable name="biomass" />
+#end               
                <variable name="AnthesisDate format yyyy-mm-dd" />
                <variable name="MaturityDate format yyyy-mm-dd" />
                <variable name="Today as HarvestDate format yyyy-mm-dd" />
@@ -237,11 +373,10 @@ endif
                </constants>
             </variables>
             <events name="Reporting Frequency">
-               <event name="harvesting" />
             </events>
          </outputfile>
          <manager2 name="ACMOVariables">
-            <text>
+            <text><![CDATA[
 using System;
 using ModelFramework;
 using CSGeneral;
@@ -249,21 +384,71 @@ using CSGeneral;
 public class Script 
 {      
    [Link] Paddock MyPaddock; 
-   [Input] DateTime Today; 
-   [Input] int Flowering_date;    // Day number of flowering
-   [Input] int Maturity_date;     // Day number of maturity
+   [Input] DateTime Today;
+   
+#if ($simulation.management.plantingCropName() == "millet")
+   [Link(NamePath = "millet")] Millet Millet;
+   [Link(NamePath = "millet1")] Millet Millet1;
+   [Link(NamePath = "millet2")] Millet Millet2;
+   [Link(NamePath = "millet3")] Millet Millet3;
+   [Link(NamePath = "millet4")] Millet Millet4;
+   [Link(NamePath = "millet5")] Millet Millet5;
+   [Units("kg/ha")]
+   [Output] double TotalYield 
+   { 
+      get 
+      { 
+         double TotYield = 0;
+         double Yield = 0;
+         if (Millet.Get("yield", out Yield)) TotYield = TotYield + Yield;
+         if (Millet1.Get("yield", out Yield)) TotYield = TotYield + Yield;
+         if (Millet2.Get("yield", out Yield)) TotYield = TotYield + Yield;
+         if (Millet3.Get("yield", out Yield)) TotYield = TotYield + Yield;
+         if (Millet4.Get("yield", out Yield)) TotYield = TotYield + Yield;
+         if (Millet5.Get("yield", out Yield)) TotYield = TotYield + Yield;
+         return TotYield;
+      }
+   }
+   [Units("kg/ha")]
+   [Output] double TotalBiomass 
+   { 
+      get 
+      { 
+         double TotBiomass = 0;
+         double Biomass = 0;
+         if (Millet.Get( "biomass", out Biomass)) TotBiomass = TotBiomass + Biomass;
+         if (Millet1.Get("biomass", out Biomass)) TotBiomass = TotBiomass + Biomass;
+         if (Millet2.Get("biomass", out Biomass)) TotBiomass = TotBiomass + Biomass;
+         if (Millet3.Get("biomass", out Biomass)) TotBiomass = TotBiomass + Biomass;
+         if (Millet4.Get("biomass", out Biomass)) TotBiomass = TotBiomass + Biomass;
+         if (Millet5.Get("biomass", out Biomass)) TotBiomass = TotBiomass + Biomass;
+         return TotBiomass;
+      }
+   }
+#elseif ($simulation.management.plantingCropName() == "rice")
+   [Input] double rlai;
+   [Input] double trw;
+#else   
    [Input] double LAI;
-   [Input] double Rain;
    [Input] double ep;
-   [Input] double[] no3_uptake;
+#end
+   [Input] double Rain;
    [Input] double[] flow_no3;
+   [Input] DateTime Simulation_end_date;
    [Output] DateTime AnthesisDate;
    [Output] DateTime MaturityDate;
+   [Units("m2/m2")]
    [Output] double LAIMax = 0;
+   [Units("mm")]
    [Output] double InCropRain = 0;
+   [Units("mm")]
    [Output] double SumEP = 0;
+   [Units("kg/ha")]
    [Output] double SumNO3Uptake = 0;
+   [Units("kg/ha")]
    [Output] double SumLeachNO3 = 0;
+   
+   private bool ACMOHasWritten = false;
    
    // The following event handler will be called each time a crop is sown.
    [EventHandler] public void OnSowing()
@@ -273,24 +458,120 @@ public class Script
       SumEP = 0.0;
       SumNO3Uptake = 0;
       SumLeachNO3 = 0;
+      ACMOHasWritten = false;
    }   
       
    // The following event handler will be called each day at the beginning of the day
    [EventHandler] public void OnPost()
    {
-      if (Flowering_date &gt; 0 &amp;&amp; AnthesisDate.Ticks == 0)
-         AnthesisDate = Today;
-      if (Maturity_date &gt; 0 &amp;&amp; MaturityDate.Ticks == 0)
-         MaturityDate = Today;
+#if ($simulation.management.plantingCropName() == "millet")
+      // Work out flowering and maturity dates.
+      string StageName;
+      Millet.Get("StageName", out StageName);
+      if (StageName.ToLower() == "flowering") AnthesisDate = Today;
+      if (StageName.ToLower() == "maturity") MaturityDate = Today;      
+      
+      double LAI, LAI1, LAI2, LAI3, LAI4, LAI5;
+      double EP, EP1, EP2, EP3, EP4, EP5;
+      double NO3Uptake, NO3Uptake1, NO3Uptake2, NO3Uptake3, NO3Uptake4, NO3Uptake5;
+      
+      Millet.Get("n_uptake", out NO3Uptake);
+      Millet1.Get("n_uptake", out NO3Uptake1);
+      Millet2.Get("n_uptake", out NO3Uptake2);
+      Millet3.Get("n_uptake", out NO3Uptake3);
+      Millet4.Get("n_uptake", out NO3Uptake4);
+      Millet5.Get("n_uptake", out NO3Uptake5);
+      SumNO3Uptake = NO3Uptake + NO3Uptake1 + NO3Uptake2 + NO3Uptake3 + NO3Uptake4 + NO3Uptake5;
+      SumNO3Uptake = SumNO3Uptake * 10;  // g/m2 to kg/ha
+      
+      Millet.Get("lai", out LAI);
+      Millet1.Get("lai", out LAI1);
+      Millet2.Get("lai", out LAI2);
+      Millet3.Get("lai", out LAI3);
+      Millet4.Get("lai", out LAI4);
+      Millet5.Get("lai", out LAI5);
       LAIMax = Math.Max(LAIMax, LAI);
-      InCropRain = InCropRain + Rain;
+      LAIMax = Math.Max(LAIMax, LAI1);
+      LAIMax = Math.Max(LAIMax, LAI2);
+      LAIMax = Math.Max(LAIMax, LAI3);
+      LAIMax = Math.Max(LAIMax, LAI4);
+      LAIMax = Math.Max(LAIMax, LAI5);
+      
+      Millet.Get("ep", out EP);
+      Millet1.Get("ep", out EP1);
+      Millet2.Get("ep", out EP2);
+      Millet3.Get("ep", out EP3);
+      Millet4.Get("ep", out EP4);
+      Millet5.Get("ep", out EP5);
+      SumEP = SumEP + EP + EP1 + EP2 + EP3 + EP4 + EP5;
+#elseif ($simulation.management.plantingCropName() == "rice")
+      // Work out flowering and maturity dates.
+      double dvs;
+      MyPaddock.Get("dvs", out dvs);
+      if (dvs >= 1 && AnthesisDate.Ticks == 0) AnthesisDate = Today;
+      if (dvs >= 2) MaturityDate = Today;      
+      
+      MyPaddock.Get("nacr", out SumNO3Uptake);
+      LAIMax = Math.Max(LAIMax, rlai);
+      SumEP = SumEP + trw;
+      
+#else
+      // Work out flowering and maturity dates.
+      #if ($simulation.management.plantingCropName() != "cotton")
+      string StageName;
+      MyPaddock.Get("StageName", out StageName);
+      if (StageName.ToLower() == "flowering") AnthesisDate = Today;
+      if (StageName.ToLower() == "maturity") MaturityDate = Today;      
+      #end
+      
+      // Get no3_uptake for whole profile (as a positive number)
+      double no3_uptake = 0;
+      #if ($simulation.management.plantingCropName() == "maize")
+      double[] no3_uptake_array;
+      MyPaddock.Get("no3_uptake", out no3_uptake_array);
+      no3_uptake = -MathUtility.Sum(no3_uptake_array);  //change from negative number to positive
+      #elseif ($simulation.management.plantingCropName() == "sorghum")
+      MyPaddock.Get("n_total_uptake", out no3_uptake);
+      #elseif ($simulation.management.plantingCropName() == "cotton")
+      MyPaddock.Get("nuptake", out SumNO3Uptake);
+      #else
+      double[] no3_uptake_array;
+      MyPaddock.Get("no3_uptake", out no3_uptake_array);
+      no3_uptake = -MathUtility.Sum(no3_uptake_array);  //change from negative number to positive
+      #end      
+      LAIMax = Math.Max(LAIMax, LAI);
       SumEP = SumEP + ep;
-      SumNO3Uptake = SumNO3Uptake + -MathUtility.Sum(no3_uptake);  //change from negative number to positive
+      SumNO3Uptake = SumNO3Uptake + no3_uptake;
+#end
+      InCropRain = InCropRain + Rain;
       SumLeachNO3 = SumLeachNO3 + flow_no3[flow_no3.Length - 1];
+      
+#if ($simulation.management.plantingCropName() == "rice")
+      string plant_status;
+      MyPaddock.Get("plant_status", out plant_status);
+      if (dvs >= 2 || plant_status == "dead")
+      {
+         Component ACMO = MyPaddock.LinkByName("ACMO") as Component;
+         ACMO.Publish("do_output");
+         Component rice = MyPaddock.LinkByName("rice") as Component;
+         rice.Publish("end_crop");
+         ACMOHasWritten = true;
+      }
+      
+      // When a crop has not reached maturity and is still growing, ACMO
+      // will be empty at the end of the simulation. The next few lines
+      // ensures that something is always written to ACMO file.
+      if (Today == Simulation_end_date && !ACMOHasWritten)
+      {
+      	 Component ACMO = MyPaddock.LinkByName("ACMO") as Component;
+         ACMO.Publish("do_output");
+      }
+#end
+      
    }
    
 }
-            </text>
+            ]]></text>
          </manager2>         
 		</area>
 	</simulation>

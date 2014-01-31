@@ -1,0 +1,3528 @@
+{
+	"soils": [{
+		"slnf": "1",
+		"sldr": "0.5",
+		"soilLayer": [{
+			"sldul": "0.22",
+			"slbdm": "1.31",
+			"slsil": "25.4",
+			"slsat": "0.31",
+			"sllb": "10",
+			"sloc": "0.6",
+			"slcly": "38.4",
+			"slphw": "7",
+			"slsc": "0.45",
+			"slrgf": "1.000",
+			"slcec": "21",
+			"slic": "0.405",
+			"slll": "0.08",
+			"sladr": "0.07",
+			"apsim_kl": "0.08",
+			"slacc": "0.04"
+		},
+		{
+			"sldul": "0.22",
+			"slbdm": "1.31",
+			"slsil": "25.4",
+			"slsat": "0.31",
+			"sllb": "22",
+			"sloc": "0.58",
+			"slcly": "38.4",
+			"slphw": "7",
+			"slsc": "0.44",
+			"slrgf": "1.000",
+			"slcec": "21",
+			"slic": "0.396",
+			"slll": "0.09",
+			"sladr": "0.08",
+			"apsim_kl": "0.08",
+			"slacc": "0.04"
+		},
+		{
+			"sldul": "0.245",
+			"slbdm": "1.42",
+			"slsil": "21.5",
+			"slsat": "0.315",
+			"sllb": "52",
+			"sloc": "0.48",
+			"slcly": "40.5",
+			"slphw": "7",
+			"slsc": "0.46",
+			"slrgf": "0.190",
+			"slcec": "21",
+			"slic": "0.414",
+			"slll": "0.125",
+			"sladr": "0.08",
+			"apsim_kl": "0.08",
+			"slacc": "0.04"
+		},
+		{
+			"sldul": "0.23",
+			"slbdm": "1.44",
+			"slsil": "20.5",
+			"slsat": "0.29",
+			"sllb": "82",
+			"sloc": "0.36",
+			"slcly": "47.5",
+			"slphw": "7",
+			"slsc": "0.35",
+			"slrgf": "0.010",
+			"slcec": "21",
+			"slic": "0.315",
+			"slll": "0.15",
+			"sladr": "0.08",
+			"apsim_kl": "0.08",
+			"slacc": "0.04"
+		}],
+		"slpf": "1",
+		"slro": "76",
+		"salb": "0.14",
+		"slu1": "6.0",
+		"diffusconst": "250",
+		"diffusslope": "22",
+		"sl_source": "TNAU",
+		"soil_id": "CMMZ710001"
+	},
+	{
+		"slnf": "1",
+		"sldr": "0.7",
+		"soilLayer": [{
+			"sldul": "0.437",
+			"slbdm": "1.14",
+			"slsil": "12",
+			"slsat": "0.491",
+			"sllb": "20",
+			"sloc": "0.62",
+			"slcly": "42.5",
+			"slphw": "8.8",
+			"slsc": "0.37",
+			"slrgf": "1.000",
+			"slcec": "26.2",
+			"slic": "0.333",
+			"slll": "0.173"
+		},
+		{
+			"sldul": "0.41",
+			"slbdm": "1.25",
+			"slsil": "4.7",
+			"slsat": "0.47",
+			"sllb": "38",
+			"sloc": "0.79",
+			"slcly": "55.3",
+			"slphw": "8.9",
+			"slsc": "0.59",
+			"slrgf": "0.644",
+			"slcec": "24.5",
+			"slic": "0.531",
+			"slll": "0.204"
+		},
+		{
+			"sldul": "0.39",
+			"slbdm": "1.18",
+			"slsil": "25.6",
+			"slsat": "0.462",
+			"sllb": "58",
+			"sloc": "0.83",
+			"slcly": "36.3",
+			"slphw": "8.5",
+			"slsc": "0.75",
+			"slrgf": "0.254",
+			"slcec": "21.7",
+			"slic": "0.675",
+			"slll": "0.215"
+		},
+		{
+			"sldul": "0.355",
+			"slbdm": "1.21",
+			"slsil": "27.8",
+			"slsat": "0.465",
+			"sllb": "81",
+			"sloc": "0.69",
+			"slcly": "34.7",
+			"slphw": "8.7",
+			"slsc": "0.67",
+			"slrgf": "0.089",
+			"slcec": "21.6",
+			"slic": "0.603",
+			"slll": "0.234"
+		},
+		{
+			"sldul": "0.327",
+			"slbdm": "1.18",
+			"slsil": "21.6",
+			"slsat": "0.444",
+			"sllb": "101",
+			"sloc": "0.65",
+			"slcly": "27.3",
+			"slphw": "8.7",
+			"slsc": "0.64",
+			"slrgf": "0.031",
+			"slcec": "23.2",
+			"slic": "0.576",
+			"slll": "0.24"
+		},
+		{
+			"sldul": "0.313",
+			"slbdm": "1.25",
+			"slsil": "16.6",
+			"slsat": "0.441",
+			"sllb": "138",
+			"sloc": "0.48",
+			"slcly": "19.8",
+			"slphw": "8.4",
+			"slsc": "0.47",
+			"slrgf": "0.008",
+			"slcec": "21.7",
+			"slic": "0.423",
+			"slll": "0.21"
+		}],
+		"slpf": "1",
+		"slro": "70",
+		"salb": "0.11",
+		"sl_source": "TNAU",
+		"soil_id": "GGGG123456"
+	}],
+	"experiments": [{
+		"fl_lat": "10.8372",
+		"exname": "RICETransplant",
+		"initial_conditions": {
+			"icpcr": "RIC",
+			"soilLayer": [{
+				"ich2o": "0.22",
+				"icno3": "0.78",
+				"icbl": "10",
+				"icn_tot": "1.14",
+				"icnh4": "0.09"
+			},
+			{
+				"ich2o": "0.22",
+				"icno3": "0.78",
+				"icbl": "22",
+				"icn_tot": "1.37",
+				"icnh4": "0.09"
+			},
+			{
+				"ich2o": "0.245",
+				"icno3": "0.78",
+				"icbl": "52",
+				"icn_tot": "3.72",
+				"icnh4": "0.09"
+			},
+			{
+				"ich2o": "0.23",
+				"icno3": "0.78",
+				"icbl": "82",
+				"icn_tot": "3.77",
+				"icnh4": "0.09"
+			}],
+			"icrag": "250",
+			"icrn": "0.8",
+			"icdat": "20080805"
+		},
+		"fl_long": "78.9969",
+		"wst_id": "ADTH",
+		"seasonal_strategy": "RICE-1----BASELINE",
+		"endat": "20081213",
+		"observed": {
+			"hwah": "2157",
+			"hdate": "20081123"
+		},
+		"field_dome_applied": "Y",
+		"sdat": "20080805",
+		"om_tot": "3500",
+		"fen_tot": "86",
+		"field_overlay": "RICE-1----all|RICE-1----SOIL1",
+		"dome_applied": "Y",
+		"management": {
+			"events": [{
+				"crid": "RIC",
+				"date": "20080815",
+				"plrs": "20",
+				"plenv": "25",
+				"page": "21",
+				"event": "planting",
+				"dssat_cul_id": "990002",
+				"apsim_cul_id": "IR58",
+				"plpop": "50",
+				"plma": "T",
+				"plph": "3",
+				"pldp": "25",
+				"nplsb": "10000",
+				"cul_name": "CORH2"
+			},
+			{
+				"event": "irrigation",
+				"irval": "15",
+				"irop": "IR010",
+				"date": "20080815"
+			},
+			{
+				"event": "irrigation",
+				"irval": "100",
+				"irop": "IR009",
+				"date": "20080815"
+			},
+			{
+				"event": "irrigation",
+				"irval": "2",
+				"irop": "IR008",
+				"date": "20080815"
+			},
+			{
+				"event": "irrigation",
+				"irop": "IR006",
+				"irval": "30",
+				"date": "20080815"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080818"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080822"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080825"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080829"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080902"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080907"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080912"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080916"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080921"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080926"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080930"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081005"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081009"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081015"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081020"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081025"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081029"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081103"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081107"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081112"
+			},
+			{
+				"event": "fertilizer",
+				"feamn": "22",
+				"fedep": "3",
+				"fecd": "FE005",
+				"feacd": "AP002",
+				"date": "20080816"
+			},
+			{
+				"event": "fertilizer",
+				"feamn": "22",
+				"fedep": "3",
+				"fecd": "FE005",
+				"feacd": "AP002",
+				"date": "20080909"
+			},
+			{
+				"event": "fertilizer",
+				"feamn": "22",
+				"fedep": "3",
+				"fecd": "FE005",
+				"feacd": "AP002",
+				"date": "20080919"
+			},
+			{
+				"event": "fertilizer",
+				"feamn": "22",
+				"fedep": "3",
+				"fecd": "FE005",
+				"feacd": "AP002",
+				"date": "20081019"
+			},
+			{
+				"omc2n": "30",
+				"omamt": "3500",
+				"omcd": "RE005",
+				"ominp": "100",
+				"omdep": "15",
+				"event": "organic_matter",
+				"date": "20080808",
+				"omn%": "1.33"
+			}]
+		},
+		"soil_id": "CMMZ710001"
+	},
+	{
+		"fl_lat": "10.8372",
+		"exname": "RICETransplantWithBundHeight",
+		"initial_conditions": {
+			"icpcr": "RIC",
+			"soilLayer": [{
+				"ich2o": "0.22",
+				"icno3": "0.78",
+				"icbl": "10",
+				"icn_tot": "1.14",
+				"icnh4": "0.09"
+			},
+			{
+				"ich2o": "0.22",
+				"icno3": "0.78",
+				"icbl": "22",
+				"icn_tot": "1.37",
+				"icnh4": "0.09"
+			},
+			{
+				"ich2o": "0.245",
+				"icno3": "0.78",
+				"icbl": "52",
+				"icn_tot": "3.72",
+				"icnh4": "0.09"
+			},
+			{
+				"ich2o": "0.23",
+				"icno3": "0.78",
+				"icbl": "82",
+				"icn_tot": "3.77",
+				"icnh4": "0.09"
+			}],
+			"icrag": "250",
+			"icrn": "0.8",
+			"icdat": "20080805"
+		},
+		"fl_long": "78.9969",
+		"wst_id": "ADTH",
+		"seasonal_strategy": "RICE-1----BASELINE",
+		"endat": "20081213",
+		"observed": {
+			"hwah": "2157",
+			"hdate": "20081123"
+		},
+		"field_dome_applied": "Y",
+		"sdat": "20080805",
+		"om_tot": "3500",
+		"fen_tot": "86",
+		"field_overlay": "RICE-1----all|RICE-1----SOIL1",
+		"dome_applied": "Y",
+		"management": {
+			"events": [{
+				"crid": "RIC",
+				"date": "20080815",
+				"plrs": "20",
+				"plenv": "25",
+				"page": "21",
+				"event": "planting",
+				"dssat_cul_id": "990002",
+				"apsim_cul_id": "IR58",
+				"plpop": "50",
+				"plma": "T",
+				"plph": "3",
+				"pldp": "25",
+				"cul_name": "CORH2"
+			},
+			{
+				"event": "irrigation",
+				"irval": "15",
+				"irop": "IR010",
+				"date": "20080815",
+				"abund": "150"
+			},
+			{
+				"event": "irrigation",
+				"irval": "100",
+				"irop": "IR009",
+				"date": "20080815"
+			},
+			{
+				"event": "irrigation",
+				"irval": "2",
+				"irop": "IR008",
+				"date": "20080815"
+			},
+			{
+				"event": "irrigation",
+				"irop": "IR006",
+				"irval": "30",
+				"date": "20080815"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080818"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080822"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080825"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080829"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080902"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080907"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080912"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080916"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080921"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080926"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080930"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081005"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081009"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081015"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081020"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081025"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081029"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081103"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081107"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081112"
+			},
+			{
+				"event": "fertilizer",
+				"feamn": "22",
+				"fedep": "3",
+				"fecd": "FE005",
+				"feacd": "AP002",
+				"date": "20080816"
+			},
+			{
+				"event": "fertilizer",
+				"feamn": "22",
+				"fedep": "3",
+				"fecd": "FE005",
+				"feacd": "AP002",
+				"date": "20080909"
+			},
+			{
+				"event": "fertilizer",
+				"feamn": "22",
+				"fedep": "3",
+				"fecd": "FE005",
+				"feacd": "AP002",
+				"date": "20080919"
+			},
+			{
+				"event": "fertilizer",
+				"feamn": "22",
+				"fedep": "3",
+				"fecd": "FE005",
+				"feacd": "AP002",
+				"date": "20081019"
+			},
+			{
+				"omc2n": "30",
+				"omamt": "3500",
+				"omcd": "RE005",
+				"ominp": "100",
+				"omdep": "15",
+				"event": "organic_matter",
+				"date": "20080808",
+				"omn%": "1.33"
+			}]
+		},
+		"soil_id": "CMMZ710001"
+	},
+	{
+		"fl_lat": "10.8372",
+		"exname": "RICEDirectSeed",
+		"initial_conditions": {
+			"icpcr": "RIC",
+			"soilLayer": [{
+				"ich2o": "0.22",
+				"icno3": "0.78",
+				"icbl": "10",
+				"icn_tot": "1.14",
+				"icnh4": "0.09"
+			},
+			{
+				"ich2o": "0.22",
+				"icno3": "0.78",
+				"icbl": "22",
+				"icn_tot": "1.37",
+				"icnh4": "0.09"
+			},
+			{
+				"ich2o": "0.245",
+				"icno3": "0.78",
+				"icbl": "52",
+				"icn_tot": "3.72",
+				"icnh4": "0.09"
+			},
+			{
+				"ich2o": "0.23",
+				"icno3": "0.78",
+				"icbl": "82",
+				"icn_tot": "3.77",
+				"icnh4": "0.09"
+			}],
+			"icrag": "250",
+			"icrn": "0.8",
+			"icdat": "20080805"
+		},
+		"fl_long": "78.9969",
+		"wst_id": "ADTH",
+		"seasonal_strategy": "RICE-1----BASELINE",
+		"endat": "20081213",
+		"observed": {
+			"hwah": "2157",
+			"hdate": "20081123"
+		},
+		"field_dome_applied": "Y",
+		"sdat": "20080805",
+		"om_tot": "3500",
+		"fen_tot": "86",
+		"field_overlay": "RICE-1----all|RICE-1----SOIL1",
+		"dome_applied": "Y",
+		"management": {
+			"events": [{
+				"crid": "RIC",
+				"date": "20080815",
+				"plrs": "20",
+				"plenv": "25",
+				"page": "21",
+				"event": "planting",
+				"dssat_cul_id": "990002",
+				"apsim_cul_id": "IR58",
+				"plpop": "50",
+				"plma": "S",
+				"plph": "3",
+				"pldp": "25",
+				"cul_name": "CORH2"
+			},
+			{
+				"event": "irrigation",
+				"irval": "15",
+				"irop": "IR010",
+				"date": "20080815"
+			},
+			{
+				"event": "irrigation",
+				"irval": "100",
+				"irop": "IR009",
+				"date": "20080815"
+			},
+			{
+				"event": "irrigation",
+				"irval": "2",
+				"irop": "IR008",
+				"date": "20080815"
+			},
+			{
+				"event": "irrigation",
+				"irop": "IR006",
+				"irval": "30",
+				"date": "20080815"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080818"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080822"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080825"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080829"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080902"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080907"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080912"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080916"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080921"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080926"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20080930"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081005"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081009"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081015"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081020"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081025"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081029"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081103"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081107"
+			},
+			{
+				"event": "irrigation",
+				"irval": "50",
+				"irop": "IR006",
+				"date": "20081112"
+			},
+			{
+				"event": "fertilizer",
+				"feamn": "22",
+				"fedep": "3",
+				"fecd": "FE005",
+				"feacd": "AP002",
+				"date": "20080816"
+			},
+			{
+				"event": "fertilizer",
+				"feamn": "22",
+				"fedep": "3",
+				"fecd": "FE005",
+				"feacd": "AP002",
+				"date": "20080909"
+			},
+			{
+				"event": "fertilizer",
+				"feamn": "22",
+				"fedep": "3",
+				"fecd": "FE005",
+				"feacd": "AP002",
+				"date": "20080919"
+			},
+			{
+				"event": "fertilizer",
+				"feamn": "22",
+				"fedep": "3",
+				"fecd": "FE005",
+				"feacd": "AP002",
+				"date": "20081019"
+			},
+			{
+				"omc2n": "30",
+				"omamt": "3500",
+				"omcd": "RE005",
+				"ominp": "100",
+				"omdep": "15",
+				"event": "organic_matter",
+				"date": "20080808",
+				"omn%": "1.33"
+			}]
+		},
+		"soil_id": "CMMZ710001"
+	}],
+	"weathers": [{
+		"co2y": "",
+		"tamp": "9.78",
+		"wst_long": "79.300",
+		"dailyWeather": [{
+			"tmax": "30.5",
+			"w_date": "20080101",
+			"tmin": "19.2",
+			"srad": "21.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.9",
+			"w_date": "20080102",
+			"tmin": "18.6",
+			"srad": "21.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "30.3",
+			"w_date": "20080103",
+			"tmin": "18.1",
+			"srad": "20.7",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "27.4",
+			"w_date": "20080104",
+			"tmin": "21.3",
+			"srad": "13.5",
+			"rain": "6"
+		},
+		{
+			"tmax": "27",
+			"w_date": "20080105",
+			"tmin": "21.2",
+			"srad": "12.2",
+			"rain": "9.4"
+		},
+		{
+			"tmax": "29.7",
+			"w_date": "20080106",
+			"tmin": "18.6",
+			"srad": "20.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.9",
+			"w_date": "20080107",
+			"tmin": "19",
+			"srad": "20.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.7",
+			"w_date": "20080108",
+			"tmin": "18.6",
+			"srad": "20.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "30",
+			"w_date": "20080109",
+			"tmin": "18.1",
+			"srad": "21",
+			"rain": "0"
+		},
+		{
+			"tmax": "31.4",
+			"w_date": "20080110",
+			"tmin": "18.7",
+			"srad": "21",
+			"rain": "0"
+		},
+		{
+			"tmax": "31.5",
+			"w_date": "20080111",
+			"tmin": "19.3",
+			"srad": "21.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.6",
+			"w_date": "20080112",
+			"tmin": "19.1",
+			"srad": "12.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "32",
+			"w_date": "20080113",
+			"tmin": "18.9",
+			"srad": "21.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "32.1",
+			"w_date": "20080114",
+			"tmin": "18.9",
+			"srad": "21.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "31.5",
+			"w_date": "20080115",
+			"tmin": "17.8",
+			"srad": "21.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "31.8",
+			"w_date": "20080116",
+			"tmin": "18.9",
+			"srad": "21.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "31",
+			"w_date": "20080117",
+			"tmin": "18.3",
+			"srad": "21.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "30.3",
+			"w_date": "20080118",
+			"tmin": "17.4",
+			"srad": "22",
+			"rain": "0"
+		},
+		{
+			"tmax": "30.3",
+			"w_date": "20080119",
+			"tmin": "16.5",
+			"srad": "22.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "30.6",
+			"w_date": "20080120",
+			"tmin": "16.7",
+			"srad": "22.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "32.5",
+			"w_date": "20080121",
+			"tmin": "19.4",
+			"srad": "20.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "32.8",
+			"w_date": "20080122",
+			"tmin": "20.7",
+			"srad": "21.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.1",
+			"w_date": "20080123",
+			"tmin": "18.2",
+			"srad": "22.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.5",
+			"w_date": "20080124",
+			"tmin": "17.4",
+			"srad": "22.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.7",
+			"w_date": "20080125",
+			"tmin": "17.9",
+			"srad": "22",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.4",
+			"w_date": "20080126",
+			"tmin": "20.2",
+			"srad": "21.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.2",
+			"w_date": "20080127",
+			"tmin": "21.1",
+			"srad": "21.6",
+			"rain": "0"
+		},
+		{
+			"tmax": "34",
+			"w_date": "20080128",
+			"tmin": "21",
+			"srad": "21.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "31.3",
+			"w_date": "20080129",
+			"tmin": "21.9",
+			"srad": "16.8",
+			"rain": "0.3"
+		},
+		{
+			"tmax": "34.8",
+			"w_date": "20080130",
+			"tmin": "20.7",
+			"srad": "22.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "35",
+			"w_date": "20080131",
+			"tmin": "20.9",
+			"srad": "19.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.3",
+			"w_date": "20080201",
+			"tmin": "23.3",
+			"srad": "12.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.2",
+			"w_date": "20080202",
+			"tmin": "22",
+			"srad": "3.7",
+			"rain": "0.8"
+		},
+		{
+			"tmax": "30.9",
+			"w_date": "20080203",
+			"tmin": "20",
+			"srad": "13.2",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "32.8",
+			"w_date": "20080204",
+			"tmin": "20.6",
+			"srad": "16.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.7",
+			"w_date": "20080205",
+			"tmin": "20.8",
+			"srad": "22.6",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.3",
+			"w_date": "20080206",
+			"tmin": "21.1",
+			"srad": "22.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "33",
+			"w_date": "20080207",
+			"tmin": "21.7",
+			"srad": "15",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.9",
+			"w_date": "20080208",
+			"tmin": "23.1",
+			"srad": "14.9",
+			"rain": "11.2"
+		},
+		{
+			"tmax": "31",
+			"w_date": "20080209",
+			"tmin": "22.3",
+			"srad": "21.9",
+			"rain": "15"
+		},
+		{
+			"tmax": "31",
+			"w_date": "20080210",
+			"tmin": "22.7",
+			"srad": "22",
+			"rain": "14"
+		},
+		{
+			"tmax": "30",
+			"w_date": "20080211",
+			"tmin": "22.6",
+			"srad": "17.5",
+			"rain": "7.4"
+		},
+		{
+			"tmax": "30.8",
+			"w_date": "20080212",
+			"tmin": "22.6",
+			"srad": "11.9",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "32.1",
+			"w_date": "20080213",
+			"tmin": "22",
+			"srad": "22.9",
+			"rain": "3"
+		},
+		{
+			"tmax": "34.3",
+			"w_date": "20080214",
+			"tmin": "21.9",
+			"srad": "23.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.5",
+			"w_date": "20080215",
+			"tmin": "22",
+			"srad": "23.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.9",
+			"w_date": "20080216",
+			"tmin": "22.8",
+			"srad": "23",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.2",
+			"w_date": "20080217",
+			"tmin": "21.8",
+			"srad": "21.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.3",
+			"w_date": "20080218",
+			"tmin": "20",
+			"srad": "24.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "35.1",
+			"w_date": "20080219",
+			"tmin": "18.1",
+			"srad": "24.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "35",
+			"w_date": "20080220",
+			"tmin": "18",
+			"srad": "24.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "35.6",
+			"w_date": "20080221",
+			"tmin": "19.6",
+			"srad": "23.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "35.5",
+			"w_date": "20080222",
+			"tmin": "21",
+			"srad": "24",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.9",
+			"w_date": "20080223",
+			"tmin": "20.1",
+			"srad": "24.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.6",
+			"w_date": "20080224",
+			"tmin": "19.4",
+			"srad": "24.6",
+			"rain": "0"
+		},
+		{
+			"tmax": "35.6",
+			"w_date": "20080225",
+			"tmin": "18.5",
+			"srad": "24.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "35.6",
+			"w_date": "20080226",
+			"tmin": "17.6",
+			"srad": "25",
+			"rain": "0"
+		},
+		{
+			"tmax": "35.9",
+			"w_date": "20080227",
+			"tmin": "19.6",
+			"srad": "25",
+			"rain": "0"
+		},
+		{
+			"tmax": "35.9",
+			"w_date": "20080228",
+			"tmin": "20.5",
+			"srad": "23.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "36",
+			"w_date": "20080229",
+			"tmin": "20.4",
+			"srad": "20.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "34",
+			"w_date": "20080301",
+			"tmin": "23.9",
+			"srad": "17.9",
+			"rain": "2.9"
+		},
+		{
+			"tmax": "35.7",
+			"w_date": "20080302",
+			"tmin": "23.5",
+			"srad": "22.1",
+			"rain": "0.4"
+		},
+		{
+			"tmax": "37.1",
+			"w_date": "20080303",
+			"tmin": "21.4",
+			"srad": "25.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "35",
+			"w_date": "20080304",
+			"tmin": "19.2",
+			"srad": "25.6",
+			"rain": "0"
+		},
+		{
+			"tmax": "36.2",
+			"w_date": "20080305",
+			"tmin": "18.8",
+			"srad": "25.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "36.2",
+			"w_date": "20080306",
+			"tmin": "21.1",
+			"srad": "25",
+			"rain": "0"
+		},
+		{
+			"tmax": "36",
+			"w_date": "20080307",
+			"tmin": "19.6",
+			"srad": "25.6",
+			"rain": "0"
+		},
+		{
+			"tmax": "36.1",
+			"w_date": "20080308",
+			"tmin": "18.3",
+			"srad": "25.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "36.7",
+			"w_date": "20080309",
+			"tmin": "19.2",
+			"srad": "24.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "36.9",
+			"w_date": "20080310",
+			"tmin": "21.5",
+			"srad": "24.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.4",
+			"w_date": "20080311",
+			"tmin": "23.6",
+			"srad": "14.7",
+			"rain": "0.5"
+		},
+		{
+			"tmax": "27.3",
+			"w_date": "20080312",
+			"tmin": "22.5",
+			"srad": "8.3",
+			"rain": "25.1"
+		},
+		{
+			"tmax": "30.8",
+			"w_date": "20080313",
+			"tmin": "23.5",
+			"srad": "18.4",
+			"rain": "18.7"
+		},
+		{
+			"tmax": "29.9",
+			"w_date": "20080314",
+			"tmin": "23.5",
+			"srad": "20.8",
+			"rain": "18.4"
+		},
+		{
+			"tmax": "31.4",
+			"w_date": "20080315",
+			"tmin": "23.4",
+			"srad": "21.2",
+			"rain": "15.2"
+		},
+		{
+			"tmax": "33.9",
+			"w_date": "20080316",
+			"tmin": "23.7",
+			"srad": "22.1",
+			"rain": "1"
+		},
+		{
+			"tmax": "31.7",
+			"w_date": "20080317",
+			"tmin": "23.6",
+			"srad": "18.5",
+			"rain": "4.2"
+		},
+		{
+			"tmax": "32.9",
+			"w_date": "20080318",
+			"tmin": "24.4",
+			"srad": "22",
+			"rain": "4.3"
+		},
+		{
+			"tmax": "30.7",
+			"w_date": "20080319",
+			"tmin": "23.8",
+			"srad": "22.1",
+			"rain": "23.4"
+		},
+		{
+			"tmax": "27.6",
+			"w_date": "20080320",
+			"tmin": "24.6",
+			"srad": "4.7",
+			"rain": "96.5"
+		},
+		{
+			"tmax": "30.1",
+			"w_date": "20080321",
+			"tmin": "24.3",
+			"srad": "18.9",
+			"rain": "28.8"
+		},
+		{
+			"tmax": "28.2",
+			"w_date": "20080322",
+			"tmin": "24.1",
+			"srad": "6",
+			"rain": "11.4"
+		},
+		{
+			"tmax": "30.4",
+			"w_date": "20080323",
+			"tmin": "23.8",
+			"srad": "18.9",
+			"rain": "18.4"
+		},
+		{
+			"tmax": "35.1",
+			"w_date": "20080324",
+			"tmin": "22.8",
+			"srad": "25.2",
+			"rain": "4.2"
+		},
+		{
+			"tmax": "35.4",
+			"w_date": "20080325",
+			"tmin": "25.3",
+			"srad": "22.7",
+			"rain": "3.2"
+		},
+		{
+			"tmax": "36.6",
+			"w_date": "20080326",
+			"tmin": "23.9",
+			"srad": "15.6",
+			"rain": "1.2"
+		},
+		{
+			"tmax": "36.7",
+			"w_date": "20080327",
+			"tmin": "23.4",
+			"srad": "20.4",
+			"rain": "0.1"
+		},
+		{
+			"tmax": "33.6",
+			"w_date": "20080328",
+			"tmin": "24.2",
+			"srad": "23",
+			"rain": "8.5"
+		},
+		{
+			"tmax": "35",
+			"w_date": "20080329",
+			"tmin": "24.3",
+			"srad": "23.9",
+			"rain": "2.4"
+		},
+		{
+			"tmax": "36.4",
+			"w_date": "20080330",
+			"tmin": "24.6",
+			"srad": "24.5",
+			"rain": "5"
+		},
+		{
+			"tmax": "35.5",
+			"w_date": "20080331",
+			"tmin": "24.7",
+			"srad": "18.2",
+			"rain": "2.7"
+		},
+		{
+			"tmax": "28.9",
+			"w_date": "20080401",
+			"tmin": "24.8",
+			"srad": "4.9",
+			"rain": "7.1"
+		},
+		{
+			"tmax": "34.9",
+			"w_date": "20080402",
+			"tmin": "23.3",
+			"srad": "24.7",
+			"rain": "4.2"
+		},
+		{
+			"tmax": "36.7",
+			"w_date": "20080403",
+			"tmin": "24.4",
+			"srad": "21.4",
+			"rain": "0.5"
+		},
+		{
+			"tmax": "35.6",
+			"w_date": "20080404",
+			"tmin": "24.7",
+			"srad": "22.8",
+			"rain": "2.7"
+		},
+		{
+			"tmax": "35.6",
+			"w_date": "20080405",
+			"tmin": "24.6",
+			"srad": "24.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "36.8",
+			"w_date": "20080406",
+			"tmin": "24",
+			"srad": "24.5",
+			"rain": "0.1"
+		},
+		{
+			"tmax": "36.1",
+			"w_date": "20080407",
+			"tmin": "24.5",
+			"srad": "25.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "36.2",
+			"w_date": "20080408",
+			"tmin": "24.3",
+			"srad": "25.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "37",
+			"w_date": "20080409",
+			"tmin": "24.4",
+			"srad": "25.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "37.4",
+			"w_date": "20080410",
+			"tmin": "24.1",
+			"srad": "22.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "38.3",
+			"w_date": "20080411",
+			"tmin": "26.1",
+			"srad": "24.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "37.3",
+			"w_date": "20080412",
+			"tmin": "25.5",
+			"srad": "24.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "38.2",
+			"w_date": "20080413",
+			"tmin": "24.3",
+			"srad": "23.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "37.8",
+			"w_date": "20080414",
+			"tmin": "25.6",
+			"srad": "18.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "39.3",
+			"w_date": "20080415",
+			"tmin": "24.6",
+			"srad": "26.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "39.8",
+			"w_date": "20080416",
+			"tmin": "25.2",
+			"srad": "26.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "40.6",
+			"w_date": "20080417",
+			"tmin": "24.8",
+			"srad": "26.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "42.6",
+			"w_date": "20080418",
+			"tmin": "24.9",
+			"srad": "26.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "42.4",
+			"w_date": "20080419",
+			"tmin": "25.1",
+			"srad": "26.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "41.3",
+			"w_date": "20080420",
+			"tmin": "25.3",
+			"srad": "26.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "41.6",
+			"w_date": "20080421",
+			"tmin": "23.9",
+			"srad": "26.6",
+			"rain": "0"
+		},
+		{
+			"tmax": "41.9",
+			"w_date": "20080422",
+			"tmin": "24.5",
+			"srad": "26.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "41.5",
+			"w_date": "20080423",
+			"tmin": "24.3",
+			"srad": "26.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "40.3",
+			"w_date": "20080424",
+			"tmin": "23.9",
+			"srad": "24.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "39.6",
+			"w_date": "20080425",
+			"tmin": "23.7",
+			"srad": "26",
+			"rain": "0"
+		},
+		{
+			"tmax": "39.8",
+			"w_date": "20080426",
+			"tmin": "26.2",
+			"srad": "10.9",
+			"rain": "2.1"
+		},
+		{
+			"tmax": "43.9",
+			"w_date": "20080427",
+			"tmin": "26.7",
+			"srad": "26",
+			"rain": "0.1"
+		},
+		{
+			"tmax": "42.2",
+			"w_date": "20080428",
+			"tmin": "28.1",
+			"srad": "21.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "38.9",
+			"w_date": "20080429",
+			"tmin": "28",
+			"srad": "10.5",
+			"rain": "0.9"
+		},
+		{
+			"tmax": "44.2",
+			"w_date": "20080430",
+			"tmin": "27.7",
+			"srad": "24.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "43.1",
+			"w_date": "20080501",
+			"tmin": "29",
+			"srad": "25.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "43.5",
+			"w_date": "20080502",
+			"tmin": "28.4",
+			"srad": "26.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "43.2",
+			"w_date": "20080503",
+			"tmin": "28.2",
+			"srad": "25.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "41.6",
+			"w_date": "20080504",
+			"tmin": "29.7",
+			"srad": "16.6",
+			"rain": "3.4"
+		},
+		{
+			"tmax": "42.1",
+			"w_date": "20080505",
+			"tmin": "27.6",
+			"srad": "25.9",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "42.5",
+			"w_date": "20080506",
+			"tmin": "28.7",
+			"srad": "26.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "42.1",
+			"w_date": "20080507",
+			"tmin": "28",
+			"srad": "18.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "41.7",
+			"w_date": "20080508",
+			"tmin": "28.3",
+			"srad": "22.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "42.7",
+			"w_date": "20080509",
+			"tmin": "27.8",
+			"srad": "22.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "44.4",
+			"w_date": "20080510",
+			"tmin": "28.4",
+			"srad": "22.4",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "37.4",
+			"w_date": "20080511",
+			"tmin": "26.6",
+			"srad": "18.5",
+			"rain": "2.8"
+		},
+		{
+			"tmax": "39.8",
+			"w_date": "20080512",
+			"tmin": "27.6",
+			"srad": "14.9",
+			"rain": "0.1"
+		},
+		{
+			"tmax": "39.1",
+			"w_date": "20080513",
+			"tmin": "28.7",
+			"srad": "14.6",
+			"rain": "0.4"
+		},
+		{
+			"tmax": "42.8",
+			"w_date": "20080514",
+			"tmin": "28.5",
+			"srad": "24.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "42.2",
+			"w_date": "20080515",
+			"tmin": "28.7",
+			"srad": "21.9",
+			"rain": "0.4"
+		},
+		{
+			"tmax": "42.6",
+			"w_date": "20080516",
+			"tmin": "29.5",
+			"srad": "25.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "42.2",
+			"w_date": "20080517",
+			"tmin": "29.5",
+			"srad": "25.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "43.4",
+			"w_date": "20080518",
+			"tmin": "29.1",
+			"srad": "21.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "41.5",
+			"w_date": "20080519",
+			"tmin": "28.7",
+			"srad": "19.2",
+			"rain": "3.2"
+		},
+		{
+			"tmax": "42",
+			"w_date": "20080520",
+			"tmin": "28.3",
+			"srad": "23.9",
+			"rain": "0.5"
+		},
+		{
+			"tmax": "33.5",
+			"w_date": "20080521",
+			"tmin": "28.1",
+			"srad": "8.1",
+			"rain": "1.5"
+		},
+		{
+			"tmax": "41.2",
+			"w_date": "20080522",
+			"tmin": "26.8",
+			"srad": "23",
+			"rain": "0"
+		},
+		{
+			"tmax": "39.5",
+			"w_date": "20080523",
+			"tmin": "28.4",
+			"srad": "18.1",
+			"rain": "1.2"
+		},
+		{
+			"tmax": "38.5",
+			"w_date": "20080524",
+			"tmin": "27.8",
+			"srad": "18.3",
+			"rain": "12.1"
+		},
+		{
+			"tmax": "38.5",
+			"w_date": "20080525",
+			"tmin": "26.8",
+			"srad": "15.9",
+			"rain": "1.7"
+		},
+		{
+			"tmax": "40.7",
+			"w_date": "20080526",
+			"tmin": "27.5",
+			"srad": "19.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "42.2",
+			"w_date": "20080527",
+			"tmin": "27.6",
+			"srad": "23.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "45.2",
+			"w_date": "20080528",
+			"tmin": "28.5",
+			"srad": "25.4",
+			"rain": "0.3"
+		},
+		{
+			"tmax": "40.7",
+			"w_date": "20080529",
+			"tmin": "28.3",
+			"srad": "17",
+			"rain": "15.8"
+		},
+		{
+			"tmax": "37.1",
+			"w_date": "20080530",
+			"tmin": "26.3",
+			"srad": "18.1",
+			"rain": "4.7"
+		},
+		{
+			"tmax": "36.9",
+			"w_date": "20080531",
+			"tmin": "27",
+			"srad": "11.1",
+			"rain": "3"
+		},
+		{
+			"tmax": "38.9",
+			"w_date": "20080601",
+			"tmin": "26.4",
+			"srad": "19.4",
+			"rain": "1.3"
+		},
+		{
+			"tmax": "39.3",
+			"w_date": "20080602",
+			"tmin": "27.3",
+			"srad": "11.9",
+			"rain": "6.8"
+		},
+		{
+			"tmax": "39.8",
+			"w_date": "20080603",
+			"tmin": "26.5",
+			"srad": "22",
+			"rain": "0.6"
+		},
+		{
+			"tmax": "40.5",
+			"w_date": "20080604",
+			"tmin": "26.8",
+			"srad": "24.6",
+			"rain": "0"
+		},
+		{
+			"tmax": "37.5",
+			"w_date": "20080605",
+			"tmin": "28.6",
+			"srad": "22.4",
+			"rain": "0.1"
+		},
+		{
+			"tmax": "37.8",
+			"w_date": "20080606",
+			"tmin": "27.9",
+			"srad": "22.2",
+			"rain": "0.1"
+		},
+		{
+			"tmax": "40.2",
+			"w_date": "20080607",
+			"tmin": "27",
+			"srad": "21",
+			"rain": "3.8"
+		},
+		{
+			"tmax": "39.4",
+			"w_date": "20080608",
+			"tmin": "26.3",
+			"srad": "21.2",
+			"rain": "13.9"
+		},
+		{
+			"tmax": "37",
+			"w_date": "20080609",
+			"tmin": "26.3",
+			"srad": "8",
+			"rain": "5.3"
+		},
+		{
+			"tmax": "36.1",
+			"w_date": "20080610",
+			"tmin": "25.8",
+			"srad": "17",
+			"rain": "1.8"
+		},
+		{
+			"tmax": "37.5",
+			"w_date": "20080611",
+			"tmin": "25.8",
+			"srad": "18.7",
+			"rain": "0.3"
+		},
+		{
+			"tmax": "36",
+			"w_date": "20080612",
+			"tmin": "26.4",
+			"srad": "16",
+			"rain": "0"
+		},
+		{
+			"tmax": "38",
+			"w_date": "20080613",
+			"tmin": "26.5",
+			"srad": "23.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "38.3",
+			"w_date": "20080614",
+			"tmin": "26.1",
+			"srad": "22.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "38.9",
+			"w_date": "20080615",
+			"tmin": "25.7",
+			"srad": "24.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "38.9",
+			"w_date": "20080616",
+			"tmin": "25.8",
+			"srad": "20.5",
+			"rain": "0.3"
+		},
+		{
+			"tmax": "40.1",
+			"w_date": "20080617",
+			"tmin": "27",
+			"srad": "22.3",
+			"rain": "2"
+		},
+		{
+			"tmax": "39.5",
+			"w_date": "20080618",
+			"tmin": "26.6",
+			"srad": "22",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "38.3",
+			"w_date": "20080619",
+			"tmin": "27.3",
+			"srad": "16.9",
+			"rain": "0.8"
+		},
+		{
+			"tmax": "39.5",
+			"w_date": "20080620",
+			"tmin": "27.1",
+			"srad": "19.3",
+			"rain": "7.1"
+		},
+		{
+			"tmax": "37.1",
+			"w_date": "20080621",
+			"tmin": "27.8",
+			"srad": "7.8",
+			"rain": "0.9"
+		},
+		{
+			"tmax": "38.2",
+			"w_date": "20080622",
+			"tmin": "27.4",
+			"srad": "14.7",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "38",
+			"w_date": "20080623",
+			"tmin": "27.7",
+			"srad": "12",
+			"rain": "0"
+		},
+		{
+			"tmax": "39.8",
+			"w_date": "20080624",
+			"tmin": "26.2",
+			"srad": "22.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "38.3",
+			"w_date": "20080625",
+			"tmin": "26.6",
+			"srad": "16.1",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "39.5",
+			"w_date": "20080626",
+			"tmin": "26.6",
+			"srad": "24.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "38.4",
+			"w_date": "20080627",
+			"tmin": "26.6",
+			"srad": "18.6",
+			"rain": "2.3"
+		},
+		{
+			"tmax": "37.5",
+			"w_date": "20080628",
+			"tmin": "26.9",
+			"srad": "16",
+			"rain": "0.4"
+		},
+		{
+			"tmax": "38.5",
+			"w_date": "20080629",
+			"tmin": "26.8",
+			"srad": "20.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "39.1",
+			"w_date": "20080630",
+			"tmin": "26.9",
+			"srad": "21.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "38.6",
+			"w_date": "20080701",
+			"tmin": "27.6",
+			"srad": "19.4",
+			"rain": "1.3"
+		},
+		{
+			"tmax": "39.3",
+			"w_date": "20080702",
+			"tmin": "27.4",
+			"srad": "22",
+			"rain": "0.1"
+		},
+		{
+			"tmax": "37",
+			"w_date": "20080703",
+			"tmin": "28.6",
+			"srad": "11.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "38.2",
+			"w_date": "20080704",
+			"tmin": "27.3",
+			"srad": "14.7",
+			"rain": "4.6"
+		},
+		{
+			"tmax": "39.3",
+			"w_date": "20080705",
+			"tmin": "27.5",
+			"srad": "21.2",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "39.2",
+			"w_date": "20080706",
+			"tmin": "27.2",
+			"srad": "15.9",
+			"rain": "6.3"
+		},
+		{
+			"tmax": "37.9",
+			"w_date": "20080707",
+			"tmin": "26.7",
+			"srad": "17",
+			"rain": "0.5"
+		},
+		{
+			"tmax": "39.7",
+			"w_date": "20080708",
+			"tmin": "26",
+			"srad": "22.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "39.4",
+			"w_date": "20080709",
+			"tmin": "27.1",
+			"srad": "18.2",
+			"rain": "0.3"
+		},
+		{
+			"tmax": "37.6",
+			"w_date": "20080710",
+			"tmin": "27.1",
+			"srad": "13.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "40.1",
+			"w_date": "20080711",
+			"tmin": "26.4",
+			"srad": "20.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "38",
+			"w_date": "20080712",
+			"tmin": "26.8",
+			"srad": "15.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "35.8",
+			"w_date": "20080713",
+			"tmin": "24.7",
+			"srad": "8.8",
+			"rain": "23.5"
+		},
+		{
+			"tmax": "31.1",
+			"w_date": "20080714",
+			"tmin": "25.3",
+			"srad": "6.3",
+			"rain": "4.1"
+		},
+		{
+			"tmax": "40.9",
+			"w_date": "20080715",
+			"tmin": "25.2",
+			"srad": "17.7",
+			"rain": "1.6"
+		},
+		{
+			"tmax": "38.7",
+			"w_date": "20080716",
+			"tmin": "26.8",
+			"srad": "18.5",
+			"rain": "3.5"
+		},
+		{
+			"tmax": "39.9",
+			"w_date": "20080717",
+			"tmin": "26.5",
+			"srad": "16.2",
+			"rain": "0.3"
+		},
+		{
+			"tmax": "39.2",
+			"w_date": "20080718",
+			"tmin": "27.3",
+			"srad": "13.3",
+			"rain": "2.8"
+		},
+		{
+			"tmax": "36.7",
+			"w_date": "20080719",
+			"tmin": "27.3",
+			"srad": "14.8",
+			"rain": "3.9"
+		},
+		{
+			"tmax": "34",
+			"w_date": "20080720",
+			"tmin": "26",
+			"srad": "17.2",
+			"rain": "2.7"
+		},
+		{
+			"tmax": "38.9",
+			"w_date": "20080721",
+			"tmin": "26",
+			"srad": "19.4",
+			"rain": "8.4"
+		},
+		{
+			"tmax": "35.5",
+			"w_date": "20080722",
+			"tmin": "26.2",
+			"srad": "16.2",
+			"rain": "5.7"
+		},
+		{
+			"tmax": "37",
+			"w_date": "20080723",
+			"tmin": "25.6",
+			"srad": "18.3",
+			"rain": "6"
+		},
+		{
+			"tmax": "37.4",
+			"w_date": "20080724",
+			"tmin": "24.9",
+			"srad": "21.3",
+			"rain": "8.2"
+		},
+		{
+			"tmax": "36.4",
+			"w_date": "20080725",
+			"tmin": "25.2",
+			"srad": "20.2",
+			"rain": "0.7"
+		},
+		{
+			"tmax": "36.6",
+			"w_date": "20080726",
+			"tmin": "25.2",
+			"srad": "21.6",
+			"rain": "1.6"
+		},
+		{
+			"tmax": "34.4",
+			"w_date": "20080727",
+			"tmin": "25.8",
+			"srad": "14.9",
+			"rain": "0.1"
+		},
+		{
+			"tmax": "32.9",
+			"w_date": "20080728",
+			"tmin": "25.3",
+			"srad": "11.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "35.4",
+			"w_date": "20080729",
+			"tmin": "25.6",
+			"srad": "15.6",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.9",
+			"w_date": "20080730",
+			"tmin": "25.9",
+			"srad": "14.8",
+			"rain": "4.3"
+		},
+		{
+			"tmax": "37.4",
+			"w_date": "20080731",
+			"tmin": "25.8",
+			"srad": "15.1",
+			"rain": "0.8"
+		},
+		{
+			"tmax": "38.5",
+			"w_date": "20080801",
+			"tmin": "26.2",
+			"srad": "19.7",
+			"rain": "8.3"
+		},
+		{
+			"tmax": "39.2",
+			"w_date": "20080802",
+			"tmin": "25.5",
+			"srad": "19.4",
+			"rain": "6.2"
+		},
+		{
+			"tmax": "37",
+			"w_date": "20080803",
+			"tmin": "25.9",
+			"srad": "18.4",
+			"rain": "1.2"
+		},
+		{
+			"tmax": "38",
+			"w_date": "20080804",
+			"tmin": "26.2",
+			"srad": "17.9",
+			"rain": "2.6"
+		},
+		{
+			"tmax": "38",
+			"w_date": "20080805",
+			"tmin": "26.2",
+			"srad": "18.9",
+			"rain": "1"
+		},
+		{
+			"tmax": "37.5",
+			"w_date": "20080806",
+			"tmin": "27.4",
+			"srad": "17.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "39.6",
+			"w_date": "20080807",
+			"tmin": "26.3",
+			"srad": "22.4",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "36.5",
+			"w_date": "20080808",
+			"tmin": "26.7",
+			"srad": "16.9",
+			"rain": "10.1"
+		},
+		{
+			"tmax": "36.2",
+			"w_date": "20080809",
+			"tmin": "25.6",
+			"srad": "16.1",
+			"rain": "1.5"
+		},
+		{
+			"tmax": "37.1",
+			"w_date": "20080810",
+			"tmin": "26.8",
+			"srad": "17.6",
+			"rain": "1"
+		},
+		{
+			"tmax": "36.8",
+			"w_date": "20080811",
+			"tmin": "26.5",
+			"srad": "13.3",
+			"rain": "0.1"
+		},
+		{
+			"tmax": "36.7",
+			"w_date": "20080812",
+			"tmin": "25.9",
+			"srad": "9.6",
+			"rain": "0.1"
+		},
+		{
+			"tmax": "35.6",
+			"w_date": "20080813",
+			"tmin": "25.9",
+			"srad": "17.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "32.7",
+			"w_date": "20080814",
+			"tmin": "25.5",
+			"srad": "9.8",
+			"rain": "10.5"
+		},
+		{
+			"tmax": "36.7",
+			"w_date": "20080815",
+			"tmin": "24.6",
+			"srad": "21.7",
+			"rain": "0.7"
+		},
+		{
+			"tmax": "38.5",
+			"w_date": "20080816",
+			"tmin": "25.3",
+			"srad": "20.9",
+			"rain": "4.7"
+		},
+		{
+			"tmax": "39",
+			"w_date": "20080817",
+			"tmin": "25.7",
+			"srad": "16.6",
+			"rain": "8.7"
+		},
+		{
+			"tmax": "30.1",
+			"w_date": "20080818",
+			"tmin": "25.2",
+			"srad": "8.2",
+			"rain": "9.3"
+		},
+		{
+			"tmax": "36.6",
+			"w_date": "20080819",
+			"tmin": "24.9",
+			"srad": "20.6",
+			"rain": "4.8"
+		},
+		{
+			"tmax": "36",
+			"w_date": "20080820",
+			"tmin": "25.8",
+			"srad": "17.6",
+			"rain": "4.6"
+		},
+		{
+			"tmax": "38.2",
+			"w_date": "20080821",
+			"tmin": "24.8",
+			"srad": "21.8",
+			"rain": "7.1"
+		},
+		{
+			"tmax": "38.2",
+			"w_date": "20080822",
+			"tmin": "25.5",
+			"srad": "21.9",
+			"rain": "1"
+		},
+		{
+			"tmax": "37.6",
+			"w_date": "20080823",
+			"tmin": "26.2",
+			"srad": "15.4",
+			"rain": "1.6"
+		},
+		{
+			"tmax": "37",
+			"w_date": "20080824",
+			"tmin": "26.3",
+			"srad": "16.3",
+			"rain": "0.8"
+		},
+		{
+			"tmax": "41.1",
+			"w_date": "20080825",
+			"tmin": "25.2",
+			"srad": "20.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "41.5",
+			"w_date": "20080826",
+			"tmin": "25.6",
+			"srad": "15.2",
+			"rain": "0.1"
+		},
+		{
+			"tmax": "38.7",
+			"w_date": "20080827",
+			"tmin": "25.3",
+			"srad": "12.7",
+			"rain": "1.2"
+		},
+		{
+			"tmax": "35",
+			"w_date": "20080828",
+			"tmin": "25.4",
+			"srad": "22.6",
+			"rain": "15.4"
+		},
+		{
+			"tmax": "34.4",
+			"w_date": "20080829",
+			"tmin": "25.2",
+			"srad": "25.1",
+			"rain": "5.9"
+		},
+		{
+			"tmax": "34.9",
+			"w_date": "20080830",
+			"tmin": "24.9",
+			"srad": "23",
+			"rain": "6"
+		},
+		{
+			"tmax": "33.9",
+			"w_date": "20080831",
+			"tmin": "25.2",
+			"srad": "22.1",
+			"rain": "21.9"
+		},
+		{
+			"tmax": "35.8",
+			"w_date": "20080901",
+			"tmin": "25.2",
+			"srad": "20.9",
+			"rain": "4.2"
+		},
+		{
+			"tmax": "36.9",
+			"w_date": "20080902",
+			"tmin": "25.9",
+			"srad": "22.7",
+			"rain": "1.8"
+		},
+		{
+			"tmax": "34.5",
+			"w_date": "20080903",
+			"tmin": "26.2",
+			"srad": "24.3",
+			"rain": "24"
+		},
+		{
+			"tmax": "37.2",
+			"w_date": "20080904",
+			"tmin": "26.1",
+			"srad": "23.7",
+			"rain": "4.1"
+		},
+		{
+			"tmax": "36.4",
+			"w_date": "20080905",
+			"tmin": "25.3",
+			"srad": "24.7",
+			"rain": "5.2"
+		},
+		{
+			"tmax": "34.3",
+			"w_date": "20080906",
+			"tmin": "25.9",
+			"srad": "24.8",
+			"rain": "19.8"
+		},
+		{
+			"tmax": "34.8",
+			"w_date": "20080907",
+			"tmin": "25.1",
+			"srad": "18.7",
+			"rain": "1.5"
+		},
+		{
+			"tmax": "34.9",
+			"w_date": "20080908",
+			"tmin": "24.8",
+			"srad": "18.9",
+			"rain": "2.1"
+		},
+		{
+			"tmax": "35.4",
+			"w_date": "20080909",
+			"tmin": "24.4",
+			"srad": "20.6",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "36.7",
+			"w_date": "20080910",
+			"tmin": "25.1",
+			"srad": "23.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "37.3",
+			"w_date": "20080911",
+			"tmin": "24.9",
+			"srad": "24.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "35.2",
+			"w_date": "20080912",
+			"tmin": "24.2",
+			"srad": "19",
+			"rain": "0"
+		},
+		{
+			"tmax": "36.5",
+			"w_date": "20080913",
+			"tmin": "24.1",
+			"srad": "19.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "38",
+			"w_date": "20080914",
+			"tmin": "24.2",
+			"srad": "23.6",
+			"rain": "4"
+		},
+		{
+			"tmax": "36",
+			"w_date": "20080915",
+			"tmin": "26.3",
+			"srad": "15.4",
+			"rain": "0.7"
+		},
+		{
+			"tmax": "38.4",
+			"w_date": "20080916",
+			"tmin": "25.3",
+			"srad": "23.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "37.8",
+			"w_date": "20080917",
+			"tmin": "25.3",
+			"srad": "21.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "39",
+			"w_date": "20080918",
+			"tmin": "24.4",
+			"srad": "25.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "39.2",
+			"w_date": "20080919",
+			"tmin": "25.4",
+			"srad": "24.6",
+			"rain": "0"
+		},
+		{
+			"tmax": "37.6",
+			"w_date": "20080920",
+			"tmin": "25.6",
+			"srad": "13.4",
+			"rain": "20.5"
+		},
+		{
+			"tmax": "33.9",
+			"w_date": "20080921",
+			"tmin": "24.9",
+			"srad": "10.2",
+			"rain": "21.5"
+		},
+		{
+			"tmax": "38.4",
+			"w_date": "20080922",
+			"tmin": "25.1",
+			"srad": "22.4",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "39.8",
+			"w_date": "20080923",
+			"tmin": "25.9",
+			"srad": "21.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "37.1",
+			"w_date": "20080924",
+			"tmin": "27.3",
+			"srad": "18.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "38.3",
+			"w_date": "20080925",
+			"tmin": "25.2",
+			"srad": "21.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "37.4",
+			"w_date": "20080926",
+			"tmin": "26.1",
+			"srad": "13",
+			"rain": "0"
+		},
+		{
+			"tmax": "37",
+			"w_date": "20080927",
+			"tmin": "27",
+			"srad": "8.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "38.4",
+			"w_date": "20080928",
+			"tmin": "27.2",
+			"srad": "17.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "39.4",
+			"w_date": "20080929",
+			"tmin": "26.4",
+			"srad": "13.8",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "36.8",
+			"w_date": "20080930",
+			"tmin": "25.5",
+			"srad": "10",
+			"rain": "0"
+		},
+		{
+			"tmax": "39.3",
+			"w_date": "20081001",
+			"tmin": "25.8",
+			"srad": "8.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "40.3",
+			"w_date": "20081002",
+			"tmin": "25",
+			"srad": "22.6",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "37.2",
+			"w_date": "20081003",
+			"tmin": "26.5",
+			"srad": "19.2",
+			"rain": "0.3"
+		},
+		{
+			"tmax": "38",
+			"w_date": "20081004",
+			"tmin": "26.4",
+			"srad": "12.9",
+			"rain": "1.5"
+		},
+		{
+			"tmax": "39.9",
+			"w_date": "20081005",
+			"tmin": "25",
+			"srad": "21.6",
+			"rain": "1.8"
+		},
+		{
+			"tmax": "38.5",
+			"w_date": "20081006",
+			"tmin": "26.6",
+			"srad": "18.1",
+			"rain": "4.9"
+		},
+		{
+			"tmax": "36.4",
+			"w_date": "20081007",
+			"tmin": "26.5",
+			"srad": "19.8",
+			"rain": "4.6"
+		},
+		{
+			"tmax": "36.8",
+			"w_date": "20081008",
+			"tmin": "25.2",
+			"srad": "10.5",
+			"rain": "1.3"
+		},
+		{
+			"tmax": "37.6",
+			"w_date": "20081009",
+			"tmin": "25.1",
+			"srad": "20.3",
+			"rain": "0.4"
+		},
+		{
+			"tmax": "36.4",
+			"w_date": "20081010",
+			"tmin": "24.6",
+			"srad": "24",
+			"rain": "3.2"
+		},
+		{
+			"tmax": "32.6",
+			"w_date": "20081011",
+			"tmin": "24",
+			"srad": "18.4",
+			"rain": "7.9"
+		},
+		{
+			"tmax": "33.5",
+			"w_date": "20081012",
+			"tmin": "24.1",
+			"srad": "22.5",
+			"rain": "16.9"
+		},
+		{
+			"tmax": "33.6",
+			"w_date": "20081013",
+			"tmin": "23.8",
+			"srad": "13.9",
+			"rain": "18.3"
+		},
+		{
+			"tmax": "29.7",
+			"w_date": "20081014",
+			"tmin": "24.3",
+			"srad": "15.8",
+			"rain": "31.7"
+		},
+		{
+			"tmax": "32",
+			"w_date": "20081015",
+			"tmin": "24",
+			"srad": "20.7",
+			"rain": "29.8"
+		},
+		{
+			"tmax": "33.5",
+			"w_date": "20081016",
+			"tmin": "24.3",
+			"srad": "21.6",
+			"rain": "17.7"
+		},
+		{
+			"tmax": "30.8",
+			"w_date": "20081017",
+			"tmin": "24.5",
+			"srad": "20.9",
+			"rain": "19.7"
+		},
+		{
+			"tmax": "30.9",
+			"w_date": "20081018",
+			"tmin": "24.2",
+			"srad": "20.2",
+			"rain": "26.8"
+		},
+		{
+			"tmax": "31",
+			"w_date": "20081019",
+			"tmin": "24.8",
+			"srad": "21.4",
+			"rain": "22.9"
+		},
+		{
+			"tmax": "32.8",
+			"w_date": "20081020",
+			"tmin": "24.4",
+			"srad": "21.6",
+			"rain": "17.4"
+		},
+		{
+			"tmax": "31.3",
+			"w_date": "20081021",
+			"tmin": "24.7",
+			"srad": "18.9",
+			"rain": "25.8"
+		},
+		{
+			"tmax": "28",
+			"w_date": "20081022",
+			"tmin": "24.6",
+			"srad": "6.7",
+			"rain": "25.3"
+		},
+		{
+			"tmax": "30.6",
+			"w_date": "20081023",
+			"tmin": "24",
+			"srad": "16.6",
+			"rain": "20.7"
+		},
+		{
+			"tmax": "33.7",
+			"w_date": "20081024",
+			"tmin": "23.3",
+			"srad": "22.6",
+			"rain": "5.9"
+		},
+		{
+			"tmax": "33.1",
+			"w_date": "20081025",
+			"tmin": "22.4",
+			"srad": "20",
+			"rain": "1.9"
+		},
+		{
+			"tmax": "30.4",
+			"w_date": "20081026",
+			"tmin": "24.8",
+			"srad": "6.5",
+			"rain": "6.5"
+		},
+		{
+			"tmax": "33.2",
+			"w_date": "20081027",
+			"tmin": "22.7",
+			"srad": "17",
+			"rain": "2.2"
+		},
+		{
+			"tmax": "34.2",
+			"w_date": "20081028",
+			"tmin": "20.7",
+			"srad": "23.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.6",
+			"w_date": "20081029",
+			"tmin": "21.2",
+			"srad": "20.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.2",
+			"w_date": "20081030",
+			"tmin": "21.1",
+			"srad": "23.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.4",
+			"w_date": "20081031",
+			"tmin": "20.7",
+			"srad": "23.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.8",
+			"w_date": "20081101",
+			"tmin": "20.2",
+			"srad": "22.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.2",
+			"w_date": "20081102",
+			"tmin": "19.6",
+			"srad": "23.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.9",
+			"w_date": "20081103",
+			"tmin": "18.7",
+			"srad": "23.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.8",
+			"w_date": "20081104",
+			"tmin": "19.7",
+			"srad": "23.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.7",
+			"w_date": "20081105",
+			"tmin": "19.7",
+			"srad": "22.4",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.2",
+			"w_date": "20081106",
+			"tmin": "21.3",
+			"srad": "18.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.1",
+			"w_date": "20081107",
+			"tmin": "23.4",
+			"srad": "17",
+			"rain": "0.6"
+		},
+		{
+			"tmax": "31.5",
+			"w_date": "20081108",
+			"tmin": "22.8",
+			"srad": "21.5",
+			"rain": "3.7"
+		},
+		{
+			"tmax": "35.1",
+			"w_date": "20081109",
+			"tmin": "23.9",
+			"srad": "21.8",
+			"rain": "0.1"
+		},
+		{
+			"tmax": "35",
+			"w_date": "20081110",
+			"tmin": "23.8",
+			"srad": "21.6",
+			"rain": "0.3"
+		},
+		{
+			"tmax": "34.5",
+			"w_date": "20081111",
+			"tmin": "24",
+			"srad": "21.9",
+			"rain": "0"
+		},
+		{
+			"tmax": "32.5",
+			"w_date": "20081112",
+			"tmin": "23.3",
+			"srad": "15.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.2",
+			"w_date": "20081113",
+			"tmin": "22.1",
+			"srad": "18",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.7",
+			"w_date": "20081114",
+			"tmin": "22.6",
+			"srad": "21.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "34.6",
+			"w_date": "20081115",
+			"tmin": "21.2",
+			"srad": "19.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "35.6",
+			"w_date": "20081116",
+			"tmin": "21.5",
+			"srad": "21.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "33.8",
+			"w_date": "20081117",
+			"tmin": "21.7",
+			"srad": "20.4",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "32.1",
+			"w_date": "20081118",
+			"tmin": "23.1",
+			"srad": "21.1",
+			"rain": "9.5"
+		},
+		{
+			"tmax": "29.3",
+			"w_date": "20081119",
+			"tmin": "23.3",
+			"srad": "11.1",
+			"rain": "2.9"
+		},
+		{
+			"tmax": "29.2",
+			"w_date": "20081120",
+			"tmin": "24",
+			"srad": "18.4",
+			"rain": "26.8"
+		},
+		{
+			"tmax": "30.9",
+			"w_date": "20081121",
+			"tmin": "22.6",
+			"srad": "20.1",
+			"rain": "5.7"
+		},
+		{
+			"tmax": "28.9",
+			"w_date": "20081122",
+			"tmin": "23.8",
+			"srad": "15.4",
+			"rain": "41.4"
+		},
+		{
+			"tmax": "27.3",
+			"w_date": "20081123",
+			"tmin": "23.7",
+			"srad": "8.5",
+			"rain": "14.6"
+		},
+		{
+			"tmax": "26.9",
+			"w_date": "20081124",
+			"tmin": "23.7",
+			"srad": "6.3",
+			"rain": "12.5"
+		},
+		{
+			"tmax": "25",
+			"w_date": "20081125",
+			"tmin": "23.2",
+			"srad": "2.5",
+			"rain": "13.2"
+		},
+		{
+			"tmax": "25.1",
+			"w_date": "20081126",
+			"tmin": "22.8",
+			"srad": "3.5",
+			"rain": "12.7"
+		},
+		{
+			"tmax": "23.7",
+			"w_date": "20081127",
+			"tmin": "22.8",
+			"srad": "1.5",
+			"rain": "9.4"
+		},
+		{
+			"tmax": "27.8",
+			"w_date": "20081128",
+			"tmin": "23",
+			"srad": "8.2",
+			"rain": "31.5"
+		},
+		{
+			"tmax": "29.5",
+			"w_date": "20081129",
+			"tmin": "22.9",
+			"srad": "19.8",
+			"rain": "20.4"
+		},
+		{
+			"tmax": "29.2",
+			"w_date": "20081130",
+			"tmin": "23.2",
+			"srad": "18.2",
+			"rain": "10.6"
+		},
+		{
+			"tmax": "28.6",
+			"w_date": "20081201",
+			"tmin": "22.9",
+			"srad": "16.1",
+			"rain": "3.7"
+		},
+		{
+			"tmax": "29.9",
+			"w_date": "20081202",
+			"tmin": "21.8",
+			"srad": "18.3",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "30.2",
+			"w_date": "20081203",
+			"tmin": "19.9",
+			"srad": "21.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "30.2",
+			"w_date": "20081204",
+			"tmin": "19.5",
+			"srad": "21.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.6",
+			"w_date": "20081205",
+			"tmin": "18.8",
+			"srad": "16.8",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.8",
+			"w_date": "20081206",
+			"tmin": "21.1",
+			"srad": "20.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.1",
+			"w_date": "20081207",
+			"tmin": "21.7",
+			"srad": "13.7",
+			"rain": "1"
+		},
+		{
+			"tmax": "27.4",
+			"w_date": "20081208",
+			"tmin": "23",
+			"srad": "8.8",
+			"rain": "11.1"
+		},
+		{
+			"tmax": "26.7",
+			"w_date": "20081209",
+			"tmin": "22.9",
+			"srad": "8.8",
+			"rain": "65.6"
+		},
+		{
+			"tmax": "29",
+			"w_date": "20081210",
+			"tmin": "22.4",
+			"srad": "16.9",
+			"rain": "5.5"
+		},
+		{
+			"tmax": "30.5",
+			"w_date": "20081211",
+			"tmin": "19.9",
+			"srad": "21.2",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.2",
+			"w_date": "20081212",
+			"tmin": "20.2",
+			"srad": "13.7",
+			"rain": "0.7"
+		},
+		{
+			"tmax": "27.4",
+			"w_date": "20081213",
+			"tmin": "21.6",
+			"srad": "7.9",
+			"rain": "3.3"
+		},
+		{
+			"tmax": "26.2",
+			"w_date": "20081214",
+			"tmin": "21.3",
+			"srad": "6.3",
+			"rain": "2.4"
+		},
+		{
+			"tmax": "23.8",
+			"w_date": "20081215",
+			"tmin": "21.6",
+			"srad": "2.8",
+			"rain": "9.7"
+		},
+		{
+			"tmax": "28.3",
+			"w_date": "20081216",
+			"tmin": "21",
+			"srad": "15.1",
+			"rain": "2.2"
+		},
+		{
+			"tmax": "29.7",
+			"w_date": "20081217",
+			"tmin": "21.2",
+			"srad": "16.3",
+			"rain": "0.2"
+		},
+		{
+			"tmax": "26.9",
+			"w_date": "20081218",
+			"tmin": "22.4",
+			"srad": "6.1",
+			"rain": "1.3"
+		},
+		{
+			"tmax": "27.3",
+			"w_date": "20081219",
+			"tmin": "22.4",
+			"srad": "11.6",
+			"rain": "3.3"
+		},
+		{
+			"tmax": "29.7",
+			"w_date": "20081220",
+			"tmin": "19.8",
+			"srad": "17.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "30.7",
+			"w_date": "20081221",
+			"tmin": "20.5",
+			"srad": "20.7",
+			"rain": "0"
+		},
+		{
+			"tmax": "30.5",
+			"w_date": "20081222",
+			"tmin": "19.7",
+			"srad": "21.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.3",
+			"w_date": "20081223",
+			"tmin": "19.2",
+			"srad": "20.3",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.8",
+			"w_date": "20081224",
+			"tmin": "20.6",
+			"srad": "16.3",
+			"rain": "1.5"
+		},
+		{
+			"tmax": "30.1",
+			"w_date": "20081225",
+			"tmin": "20.9",
+			"srad": "18.8",
+			"rain": "0.3"
+		},
+		{
+			"tmax": "30.8",
+			"w_date": "20081226",
+			"tmin": "19.4",
+			"srad": "21.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "31.1",
+			"w_date": "20081227",
+			"tmin": "20.2",
+			"srad": "21",
+			"rain": "0"
+		},
+		{
+			"tmax": "30.4",
+			"w_date": "20081228",
+			"tmin": "18.6",
+			"srad": "21.5",
+			"rain": "0"
+		},
+		{
+			"tmax": "30.3",
+			"w_date": "20081229",
+			"tmin": "17.9",
+			"srad": "21.1",
+			"rain": "0"
+		},
+		{
+			"tmax": "29",
+			"w_date": "20081230",
+			"tmin": "19",
+			"srad": "17",
+			"rain": "0"
+		},
+		{
+			"tmax": "29.6",
+			"w_date": "20081231",
+			"tmin": "17.6",
+			"srad": "21.2",
+			"rain": "0"
+		}],
+		"tav": "29.61",
+		"wst_elev": "19",
+		"wst_lat": "11.000",
+		"wst_notes": "Aduthurai weather data",
+		"clim_id": "0XXX",
+		"wst_id": "ADTH"
+	}]
+}

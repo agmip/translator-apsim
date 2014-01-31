@@ -40,6 +40,12 @@ public abstract class VTDReader {
 		return ap.evalXPathToString();
 	}
 	
+	public  double xPathDouble(String path) throws XPathParseException{
+		AutoPilot ap = new AutoPilot(vn);
+		ap.selectXPath(prefix+path);
+		return ap.evalXPathToNumber();
+	}	
+	
 	public  String xAbsPathText(String path) throws XPathParseException{
 		AutoPilot ap = new AutoPilot(vn);
 		ap.selectXPath(path);

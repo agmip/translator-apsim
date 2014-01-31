@@ -1,5 +1,6 @@
 package org.agmip.translators.apsim.events;
 
+import org.agmip.translators.apsim.core.Management;
 import org.agmip.translators.apsim.util.Util;
 import org.codehaus.jackson.annotate.JsonProperty;
 
@@ -13,7 +14,7 @@ public class Tillage extends Event {
 
     // depth
     @JsonProperty("tidep")
-    String depth = "?";
+    double depth = Util.missingValue;
     
     // implementCode
     @JsonProperty("tiimp")
@@ -38,16 +39,15 @@ public class Tillage extends Event {
 
     // Initialise this instance.
     @Override
-    public void initialise() {
+    public void initialise(Management management) {
         if ("?".equals(getDate()))
-            log += "  * Operation tillage ERROR: Date missing. '?' has been inserted\r\n";
+            log += "  * Operation tillage ERROR: Date missing (date).r\n";
         
-        if ("?".equals(depth)) {
-            depth = "0";
-            log += "  * Operation " + getDate() + " ASSUMPTION: Tillage depth missing. Zero mm has been assumed\r\n";
-        }
+        if (depth == Util.missingValue)
+            log += "  * Operation " + getDate() + " ERROR: Tillage depth missing (tidep).\r\n";
+        
         if ("?".equals(implementCode))
-            log += "  * Operation " + getDate() + " ERROR: Tillage implement missing. '?' has been inserted\r\n";
+            log += "  * Operation " + getDate() + " ERROR: Tillage implement missing (tiimp).\r\n";
         else
             log += "  * Operation " + getDate() + " ASSUMPTION: Tillage type: " + getImplementName() + " may not match an APSIM tillage type\r\n";
     }

@@ -1,5 +1,7 @@
 package org.agmip.translators.apsim.events;
 
+import org.agmip.translators.apsim.core.Management;
+import org.agmip.translators.apsim.util.Util;
 import org.codehaus.jackson.annotate.JsonProperty;
 
 /**
@@ -11,47 +13,54 @@ import org.codehaus.jackson.annotate.JsonProperty;
 public class OrganicMatter extends Event {
 
     @JsonProperty("omamt")
-    private String amount = "?";
+    private double amount = Util.missingValue;
     
     @JsonProperty("omdep")
-    private String depth = "?";
+    private double depth = Util.missingValue;
     
     @JsonProperty("omc%")
-    private String carbon = "?";
+    private double carbon = Util.missingValue;
 
     @JsonProperty("omn%")
-    private String nitrogen = "?";
+    private double nitrogen = Util.missingValue;
 
     @JsonProperty("omp%")
-    private String phosphorus = "?";
+    private double phosphorus = Util.missingValue;
+
+    @JsonProperty("omc2n")
+    private double cnr = Util.missingValue;
     
     @Override
     public String getApsimAction() {
-        String cnr = "?";
-        String cpr = "?";
+        double cpr = Util.missingValue;
         
-        String Action = "SurfaceOrganicMatter add_surfaceom type=manure, name=manure, " +
-                        "mass=" + amount + "(kg/ha), " +
+        String Action = "SurfaceOrganicMatter add_surfaceom " +
+                        "type = manure, " +
+        		        "name = manure, " +
+                        "mass = " + amount + " (kg/ha), " +
                         "depth = " + depth + " (mm)";
                
-        if (!amount.equals("?")) {
-            if (!carbon.equals("?")) {
-                if (!nitrogen.equals("?")) {
+        if (cnr != Util.missingValue)
+        	Action += ", cnr = " + String.valueOf(cnr);
+        
+        else if (amount != Util.missingValue) {
+            if (carbon != Util.missingValue) {
+                if (nitrogen != Util.missingValue) {
                     double amountCarbon = Double.valueOf(carbon) / 100.0 * Double.valueOf(amount);
                     double amountNitrogen = Double.valueOf(nitrogen) / 100.0 * Double.valueOf(amount);
                     if (amountNitrogen == 0.0)
-                        cnr = "0";
+                        cnr = 0;
                     else
-                        cnr = String.valueOf(amountCarbon / amountNitrogen * 100.0);
+                        cnr = amountCarbon / amountNitrogen * 100.0;
                 }
                 Action += ", cnr = " + cnr;
-                if (!phosphorus.equals("?")) {
+                if (phosphorus != Util.missingValue) {
                     double amountCarbon = Double.valueOf(carbon) / 100.0 * Double.valueOf(amount);
                     double amountPhosphorus = Double.valueOf(phosphorus) / 100.0 * Double.valueOf(amount);
                     if (amountPhosphorus == 0.0)
-                        cpr = "0";
+                        cpr = 0;
                     else
-                        cpr = String.valueOf(amountCarbon / amountPhosphorus * 100.0);
+                        cpr = amountCarbon / amountPhosphorus * 100.0;
                     Action += ", cpr = " + cpr;
                 }
             }
@@ -60,19 +69,20 @@ public class OrganicMatter extends Event {
     }
 
     @Override
-    public void initialise() {
+    public void initialise(Management management) {
         if ("?".equals(getDate()))
             log += "  * Operation fertiliser ERROR: Date missing. '?' has been inserted\r\n";
         
-        if ("?".equals(amount))
-            log += "  * Operation " + getDate() + " ERROR: Organic matter application missing amount\r\n";
-        
-        if ("?".equals(depth))
-            log += "  * Operation " + getDate() + " ERROR: Organic matter application missing depth\r\n";
-        if ("?".equals(carbon))
-            log += "  * Operation " + getDate() + " ERROR: Organic matter application missing carbon percent. CNR=?\r\n";
-        if ("?".equals(nitrogen))
-            log += "  * Operation " + getDate() + " ERROR: Organic matter application missing nitrogen percent. CNR=?\r\n";
+        if (amount == Util.missingValue)
+            log += "  * Operation " + getDate() + " ERROR: Organic matter application missing amount (omamt).\r\n";
+        if (depth == Util.missingValue)
+            log += "  * Operation " + getDate() + " ERROR: Organic matter application missing depth (omdep).\r\n";
+        if (cnr == Util.missingValue) {
+        	if (carbon == Util.missingValue)
+	            log += "  * Operation " + getDate() + " ERROR: Organic matter application missing carbon percent (omc%).\r\n";
+	        if (nitrogen == Util.missingValue)
+	            log += "  * Operation " + getDate() + " ERROR: Organic matter application missing nitrogen percent (omn%).\r\n";
+        }
     }
 
 }

@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 
 /**
@@ -15,7 +16,7 @@ public class Util {
 
     public static final SimpleDateFormat agmip = new SimpleDateFormat("yyyyMMdd");
     public static final SimpleDateFormat apsim = new SimpleDateFormat("dd/MM/yyyy");
-    
+    public static final double missingValue = -99.999;
       
     public static String GetYear(String agmipDate) throws ParseException {
         Date date = apsim.parse(agmipDate);
@@ -300,8 +301,8 @@ public class Util {
         {
             if (dX <= dXCoordinate[iIndex])
             {
-                //Chcek to see if dX is exactly equal to dXCoordinate[iIndex]
-                //If so then don't calcuate dY.  This was added to remove roundoff error.
+                //Check to see if dX is exactly equal to dXCoordinate[iIndex]
+                //If so then don't calculate dY.  This was added to remove roundoff error.
                 if (dX == dXCoordinate[iIndex])
                     return dYCoordinate[iIndex];
                 //Found position
@@ -320,6 +321,12 @@ public class Util {
                 return dYCoordinate[iIndex];
         }// END OF FOR LOOP
         return 0.0;
+    }
+    
+    public static String toApsimCalDate(String agmipCalDateStr) throws ParseException {
+        SimpleDateFormat agmipCal = new SimpleDateFormat("MM-dd");
+        SimpleDateFormat apsimCal = new SimpleDateFormat("d-MMM", Locale.US);
+        return apsimCal.format(agmipCal.parse(agmipCalDateStr));
     }
     
 }

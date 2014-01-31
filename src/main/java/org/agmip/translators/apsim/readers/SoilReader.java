@@ -25,6 +25,7 @@ public class SoilReader extends VTDReader{
 	}
 
 
+	@SuppressWarnings("unchecked")
 	public List<Soil> read() throws Exception{
 		AutoPilot a = xpath("");
 		int count = 1;
@@ -44,20 +45,21 @@ public class SoilReader extends VTDReader{
 	}
 	
 	
+	@SuppressWarnings("unchecked")
 	public Soil read(String path) throws Exception{
 		Soil soil = new Soil();
 	    
-		soil.setCn2bare(xPathText(path+"/SoilWat/Cn2Bare"));
-		soil.setDiffusConst(xPathText(path+"/SoilWat/DiffusConst"));
-		soil.setDiffusSlope(xPathText(path+"/SoilWat/DiffusSlope"));
+		soil.setCn2bare(xPathDouble(path+"/SoilWat/Cn2Bare"));
+		soil.setDiffusConst(xPathDouble(path+"/SoilWat/DiffusConst"));
+		soil.setDiffusSlope(xPathDouble(path+"/SoilWat/DiffusSlope"));
 		soil.setId(xPathText(path+"/@name"));
-		soil.setLatitude(xPathText(path+"/Latitude"));
-		soil.setLongitude(xPathText(path+"/Longitude"));
+		soil.setLatitude(xPathDouble(path+"/Latitude"));
+		soil.setLongitude(xPathDouble(path+"/Longitude"));
 		soil.setName(xPathText(path+"/@name"));
-		soil.setSalb(xPathText(path+"/SoilWat/Salb")); 
+		soil.setSalb(xPathDouble(path+"/SoilWat/Salb")); 
 		soil.setSite(xPathText(path+"/Site"));
 		soil.setSource(xPathText(path+"/DataSource"));
-		soil.setU(xPathText(path+"/SoilWat/SummerU"));
+		soil.setU(Double.parseDouble(xPathText(path+"/SoilWat/SummerU")));
 		
 //		TODO: Deal with soil classification.
 //		String[] soilClass = get(prefix+"/Comment[1]").split(":");			
@@ -70,14 +72,14 @@ public class SoilReader extends VTDReader{
 		soil.setLayers(layers);
 		for(int l=1; l<=soilLayers; l++) {
 			SoilLayer layer = new SoilLayer();
-			layer.setBulkDensity(xPathText(path+"/Water/Layer["+l+"]/BD"));
-			layer.setDrainedUpperLimit(xPathText(path+"/Water/Layer["+l+"]/DUL"));
-			layer.setLowerLimit(xPathText(path+"/Water/Layer["+l+"]/LL15"));
-			layer.setOrganicCarbon(xPathText(path+"/SoilOrganicMatter/Layer["+l+"]/OC"));
-			layer.setPh(xPathText(path+"/Analysis/Layer["+l+"]/PH"));
-			layer.setSaturation(xPathText(path+"/Water/Layer["+l+"]/SAT"));
-			layer.setSwcon(xPathText(path+"/SoilWat/Layer["+l+"]/SWCON"));
-			layer.setThickness(xPathText(path+"/Water/Layer["+l+"]/Thickness"));
+			layer.setBulkDensity(xPathDouble(path+"/Water/Layer["+l+"]/BD"));
+			layer.setDrainedUpperLimit(xPathDouble(path+"/Water/Layer["+l+"]/DUL"));
+			layer.setLowerLimit(xPathDouble(path+"/Water/Layer["+l+"]/LL15"));
+			layer.setOrganicCarbon(xPathDouble(path+"/SoilOrganicMatter/Layer["+l+"]/OC"));
+			layer.setPh(xPathDouble(path+"/Analysis/Layer["+l+"]/PH"));
+			layer.setSaturation(xPathDouble(path+"/Water/Layer["+l+"]/SAT"));
+			soil.setSwcon(xPathDouble(path+"/SoilWat/Layer["+l+"]/SWCON"));
+			layer.setThickness(xPathDouble(path+"/Water/Layer["+l+"]/Thickness"));
 			
 			layers[l-1]=layer;
 		}
@@ -85,8 +87,8 @@ public class SoilReader extends VTDReader{
 
 		Double sum = 0.0;
 		for(int k=0;k<layers.length;k++){
-			sum = sum + Double.parseDouble(layers[k].getThickness())/10;
-			layers[k].setBottomDepth(sum.toString());
+			sum = sum + layers[k].getThickness()/10;
+			layers[k].setBottomDepth(sum);
 		}
 		return soil;
 	}

@@ -7,10 +7,10 @@
 
 latitude = $weather.latitude
 longitude = $weather.longitude
-tav = $weather.tav ()
-amp = $weather.amp ()
+tav = $weather.tav (oC)
+amp = $weather.amp (oC)
 
-#if($weather.co2)
+#if($weather.co2 != -99.999)
 co2 = $weather.co2
 #end
 year  day    radn maxt  mint  rain 

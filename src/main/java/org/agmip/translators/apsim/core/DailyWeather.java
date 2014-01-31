@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import org.agmip.translators.apsim.util.DateSerializer;
+import org.agmip.translators.apsim.util.Util;
 import org.codehaus.jackson.JsonGenerator;
 import org.codehaus.jackson.JsonParser;
 import org.codehaus.jackson.JsonProcessingException;
@@ -40,54 +42,54 @@ public class DailyWeather {
     // solarRadiation
     @JsonProperty("srad")
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
-    private String solarRadiation="?";
-    public String getSolarRadiation() { return solarRadiation; }
-    public void setSolarRadiation(String value) {solarRadiation = value;}
+    private double solarRadiation = Util.missingValue;
+    public double getSolarRadiation() { return solarRadiation; }
+    public void setSolarRadiation(double value) {solarRadiation = value;}
     
     // maxTemperature
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
     @JsonProperty("tmax")
-    private String maxTemperature="?";
-    public String getMaxTemperature() { return maxTemperature; }
-    public void setMaxTemperature(String value) {maxTemperature = value;}
+    private double maxTemperature = Util.missingValue;
+    public double getMaxTemperature() { return maxTemperature; }
+    public void setMaxTemperature(double value) {maxTemperature = value;}
     
     // minTemperature
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
     @JsonProperty("tmin")
-    private String minTemperature="?";
-    public String getMinTemperature() { return minTemperature; }
-    public void setMinTemperature(String value) {minTemperature = value;}
+    private double minTemperature = Util.missingValue;
+    public double getMinTemperature() { return minTemperature; }
+    public void setMinTemperature(double value) {minTemperature = value;}
     
     // rainfall
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
     @JsonProperty("rain")
-    private String rainfall="?";
-    public String getRainfall() { return rainfall; }
-    public void setRainfall(String value) {rainfall = value;}
+    private double rainfall = Util.missingValue;
+    public double getRainfall() { return rainfall; }
+    public void setRainfall(double value) {rainfall = value;}
     
     // windSpeed
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
     @JsonProperty("wind")
-    private String windSpeed="?";
-    public String getWindSpeed() { return windSpeed; }
+    private double windSpeed = Util.missingValue;
+    public double getWindSpeed() { return windSpeed; }
     
     // dewPoint
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
     @JsonProperty("dewp")
-    private String dewPoint="?";
-    public String getDewPoint() { return dewPoint; }
+    private double dewPoint = Util.missingValue;
+    public double getDewPoint() { return dewPoint; }
     
     // vaporPressure
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
     @JsonProperty("vprs")
-    private String vaporPressure="?";
-    public String getVaporPressure() { return vaporPressure; }
+    private double vaporPressure = Util.missingValue;
+    public double getVaporPressure() { return vaporPressure; }
 
     // relativeHumidity
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
     @JsonProperty("rhum")
-    private String relativeHumidity="?";
-    public String getRelativeHumidity() { return relativeHumidity; }
+    private double relativeHumidity = Util.missingValue;
+    public double getRelativeHumidity() { return relativeHumidity; }
 
     // Needed for Jackson
     public DailyWeather() {}

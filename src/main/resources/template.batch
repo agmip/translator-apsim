@@ -1,0 +1,24 @@
+@echo off
+#foreach ($apsimDir in $apsimDirs)
+if exist "$apsimDir" (
+  if exist ${crop}.xml (
+    echo Run APSIM...
+    "${apsimDir}${apsimExe}" AgMip.apsim
+    echo done!
+  ) else (
+    echo Copy model file into working directory...
+    if exist "${apsimDir}${model}.xml" (
+      copy "${apsimDir}${model}.xml" ${crop}.xml
+      echo done!
+      echo Run APSIM...
+      "${apsimDir}${apsimExe}" AgMip.apsim
+      echo done!
+    ) else (
+      echo Failed! Crop file is missing!
+      pause
+    )
+  )
+) else #end (
+  echo APSIM Model is missing!
+  pause
+)
