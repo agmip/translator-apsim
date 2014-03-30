@@ -96,8 +96,9 @@ public class Simulation {
             Name = experimentName;
         else
             Name = experimentName + "-" + treatmentName;
-        Name = Name.replace("/", "_");
-        Name = Name.replace("\\", "_");
+//        Name = Name.replace("/", "_");
+//        Name = Name.replace("\\", "_");
+        Name = Name.replaceAll("[/\\\\*|?:<>\"]", "_");
         return Name;
     }
     

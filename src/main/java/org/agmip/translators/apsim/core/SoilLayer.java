@@ -88,22 +88,32 @@ public class SoilLayer {
     // fbiom
     @JsonProperty("slacc")
     private double biomC = Util.missingValue;
+    @JsonProperty("slfac")
+    private double biomCFraction = Util.missingValue;
     public double getFbiom() {
-    	if (organicCarbon == 0)
-    		return 0;
-    	else
-    		return biomC / organicCarbon; 
-    	}
+        if (biomCFraction != Util.missingValue) {
+            return biomCFraction;
+        } else if (organicCarbon == 0) {
+            return 0;
+        } else {
+            return biomC / organicCarbon;
+        } 
+     }
     
     // finert
     @JsonProperty("slic")
     private double inertC = Util.missingValue;
-    public double getFinert() { 
-    	if (organicCarbon == 0)
-    		return 0;
-    	else
-    		return inertC / organicCarbon; 
+    @JsonProperty("slfic")
+    private double inertCFraction = Util.missingValue;
+    public double getFinert() {
+        if (inertCFraction != Util.missingValue) {
+            return inertCFraction;
+        } else if (organicCarbon == 0) {
+            return 0;
+        } else {
+            return inertC / organicCarbon; 
     	}
+    }
 
     // ks
     @JsonProperty("sksat")
@@ -157,11 +167,11 @@ public class SoilLayer {
         if (kl == Util.missingValue)
             log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing KL (apsim_kl).\r\n";
         
-        if (biomC == Util.missingValue)
-            log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing FBIOM (slacc).\r\n";
+        if (biomC == Util.missingValue && biomCFraction == Util.missingValue)
+            log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing FBIOM (both slacc and slfac).\r\n";
         
-        if (inertC == Util.missingValue)
-            log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing InertC (slic).\r\n";
+        if (inertC == Util.missingValue && inertCFraction == Util.missingValue)
+            log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing InertC (both slic and slfic).\r\n";
         
         thickness = bottomDepth * 10 - cumThickness;
         
