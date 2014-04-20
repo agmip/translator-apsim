@@ -125,6 +125,14 @@ public class SoilLayer {
     		return ksat * 10.0 * 24.0;   // Convert from cm/h to mm/day 
     	}
     
+    // swcon
+    @JsonProperty("sldrl")
+    private double swcon = Util.missingValue;
+    public double getSwcon() { return swcon; }
+    public void setSwcon(double swcon) {
+		this.swcon = swcon;
+	}    
+    
     @JsonIgnore
     private String log;
     public String getLog() { return log; }    

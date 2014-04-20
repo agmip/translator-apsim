@@ -66,7 +66,7 @@
 #foreach ($layer in $soil.layers)             
                 <Layer>
                     <Thickness units="mm">$layer.thickness</Thickness>
-                    <SWCON units="0-1">$soil.swcon</SWCON>
+                    <SWCON units="0-1">#if( $layer.swcon == -99.999 )$soil.swcon#else$layer.swcon#end</SWCON>
                     <MWCON units="0-1" />
                     <KLAT units="mm/d" />
                 </Layer>
@@ -81,7 +81,7 @@
 #foreach ($layer in $soil.layers)        
                 <Layer>                                            
                     <Thickness units="mm">$layer.thickness</Thickness>                                                
-                    <OC units="Total %">#if( $layer.organicCarbon == 0 ) 0.1 #else $layer.organicCarbon #end</OC>
+                    <OC units="Total %">#if( $layer.organicCarbon == 0 )0.1#else$layer.organicCarbon#end</OC>
                     <FBiom units="0-1">$layer.fbiom</FBiom>
                     <FInert units="0-1">$layer.finert</FInert>
                 </Layer>

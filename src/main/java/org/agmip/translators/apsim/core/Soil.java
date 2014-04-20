@@ -248,13 +248,18 @@ public class Soil {
     public void initialise() throws Exception {
         log = "";
         
-        if (layers.length == 0)
-           log += "  * Soil ERROR: No soil layers found\r\n";
-        else {
+        boolean isSLDRLMissing = false;
+        if (layers.length == 0) {
+            log += "  * Soil ERROR: No soil layers found\r\n";
+            isSLDRLMissing = true;
+        } else {
             // calculate a thickness for each layer.
             double cumThickness = 0.0;
             for (int i = 0; i < layers.length; i++) {
                 cumThickness = layers[i].initialise(cumThickness, i+1, layers.length);
+                if (layers[i].getSwcon() == Util.missingValue) {
+                    isSLDRLMissing = true;
+                }
             } 
             
            
@@ -281,8 +286,8 @@ public class Soil {
         if (diffusSlope == Util.missingValue)
             log += "  * Soil ERROR: Missing diffusSlope (diffusSlope).\r\n";        
 
-        if (swcon == Util.missingValue)
-            log += "  * Soil ERROR: Missing SWCON (sldr).\r\n";
+        if (swcon == Util.missingValue && isSLDRLMissing)
+            log += "  * Soil ERROR: Missing SWCON (sldr and sldrl).\r\n";
         
     }
    
