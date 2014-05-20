@@ -133,6 +133,14 @@ public class SoilLayer {
 		this.swcon = swcon;
 	}    
     
+    // xf
+    @JsonProperty("slrgf")
+    private double xf = Util.missingValue;
+    public double getXf() { return xf; }
+    public void setXf(double xf) {
+		this.xf = xf;
+	}
+    
     @JsonIgnore
     private String log;
     public String getLog() { return log; }    
@@ -175,6 +183,9 @@ public class SoilLayer {
         if (kl == Util.missingValue)
             log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing KL (apsim_kl).\r\n";
         
+        if (xf == Util.missingValue)
+            log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing XF (slrgf).\r\n";
+
         if (biomC == Util.missingValue && biomCFraction == Util.missingValue)
             log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing FBIOM (both slacc and slfac).\r\n";
         

@@ -37,7 +37,7 @@
                         <Thickness units="mm">$layer.thickness</Thickness>
                         <LL units="mm/mm">$layer.lowerLimit</LL>
                         <KL units="/day">$layer.kl</KL>
-                        <XF units="0-1">1</XF>
+                        <XF units="0-1">$layer.xf</XF>
                     </Layer>
 #end
                 </SoilCrop>
