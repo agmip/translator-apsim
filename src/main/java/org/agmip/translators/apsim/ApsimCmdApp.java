@@ -6,11 +6,17 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
+import org.agmip.common.Functions;
+import org.agmip.functions.DataCombinationHelper;
 import org.agmip.util.JSONAdapter;
+import org.agmip.util.MapUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,14 +28,18 @@ public class ApsimCmdApp {
 
     private static boolean isCompressed = false;
     private static boolean isToModel = false;
-    private static String inputPath = null;
-    private static String outputPath = "APSIM";
+    private static ArrayList<String> inputPaths = new ArrayList();
+    private static String outputPath = getOutputPath("");
     private static final Logger LOG = LoggerFactory.getLogger(ApsimCmdApp.class);
 
     public static void main(String... args) throws IOException {
         readCommand(args);
+        if (inputPaths == null) {
+            LOG.error("There is no valid input path, please check input arguments");
+            return;
+        }
         if (isToModel) {
-            LOG.info("Translate {} to APSIM...", new File(inputPath).getName());
+            LOG.info("Translate {} to APSIM...", inputPaths);
             ApsimWriter translator = new ApsimWriter();
             translator.writeFile(outputPath, readJson());
             if (isCompressed) {
@@ -37,7 +47,7 @@ public class ApsimCmdApp {
             }
             LOG.info("Job done!");
         } else {
-            LOG.info("Translate {} to JSON...", new File(inputPath).getName());
+            LOG.info("Translate {} to JSON...", inputPaths);
             LOG.warn("It is not implemented yet!");
 //            ApsimReader translator = new ApsimReader();
 //            Map result = translator.readFile(inputPath);
@@ -62,21 +72,22 @@ public class ApsimCmdApp {
                 isCompressed = true;
             } else if (args[i].toUpperCase().endsWith(".JSON")) {
                 isToModel = true;
-                inputPath = args[i];
-                LOG.info("Read from {}", inputPath);
+                inputPaths.add(args[i]);
             } else if (args[i].toUpperCase().endsWith(".ZIP")) {
                 isToModel = false;
-                inputPath = args[i];
-                LOG.info("Read from {}", inputPath);
+                inputPaths.add(args[i]);
             } else {
                 outputPath = getOutputPath(args[i]);
-                LOG.info("Output to {}", outputPath);
             }
         }
+        LOG.info("Read from {}", inputPaths);
+        LOG.info("Output to {}", outputPath);
     }
 
     private static Map readJson() throws IOException {
-        return JSONAdapter.fromJSONFile(inputPath);
+        Map data = DataCombinationHelper.combine(inputPaths);
+        DataCombinationHelper.fixData(data);
+        return data;
     }
     
     private static void createZip() throws FileNotFoundException, IOException {
