@@ -31,7 +31,10 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
     @Type(value = OrganicMatter.class, name = "organic_matter"), 
     @Type(value = Tillage.class, name = "tillage"), 
     @Type(value = Chemical.class, name = "chemical"), 
-    @Type(value = Harvest.class, name = "harvest"),  
+    @Type(value = Harvest.class, name = "harvest"),
+    @Type(value = AutoIrrigation.class, name = "auto_irrig"),
+    @Type(value = MulchAdd.class, name = "mulch_add"),
+    @Type(value = MulchRemove.class, name = "mulch_remove"),
     })  
 @JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class Event {

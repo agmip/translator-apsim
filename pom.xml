@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.agmip.translators</groupId>
     <artifactId>translator-apsim</artifactId>
-    <version>1.3.5</version>
+    <version>1.3.6</version>
     <packaging>jar</packaging>
     <name>AgMIP APSIM ACE Translator</name>
     <url>http://www.agmip.org/</url>
@@ -89,7 +89,7 @@
         <connection>scm:git:git://github.com/agmip/translator-apsim.git</connection>
         <developerConnection>scm:git:git@github.com/agmip/translator-apsim.git</developerConnection>
         <url>https://github.com/agmip/translator-apsim</url>
-        <tag>translator-apsim-1.3.5</tag>
+        <tag>translator-apsim-1.3.6</tag>
     </scm>
 
     <build>
