@@ -42,24 +42,35 @@ public class Weather {
     @JsonProperty("wst_site")
     private String site="?";
     public String getSite() { return site; }
+    public void setSite(String value) {site = value;}
  
     // dist
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
     @JsonProperty("wst_dist")
     private String dist="?";
     public String getDist() { return dist; }
+    public void setDist(String value) {dist = value;}
+ 
+    // climate ID
+    @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
+    @JsonProperty("clim_id")
+    private String climateId="";
+    public String getClimateId() { return climateId; }
+    public void setClimateId(String value) {climateId = value;}
 
     // elevation
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
     @JsonProperty("wst_elev")
     private double elevation = Util.missingValue;
     public double getElevation() { return elevation; }
+    public void setElevation(Double value) {elevation = value;}
     
     // longName    
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
     @JsonProperty("wst_source") 
     private String source = "?";
     public String getSource() { return source; }
+    public void setSource(String value) {source = value;}
     
     // latitude
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
@@ -111,6 +122,7 @@ public class Weather {
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
     @JsonProperty("co2y") 
     private String CO2Y = "";
+    public void setCO2Y(String value) {CO2Y = value;}
     
     // records
     @JsonSerialize(include=JsonSerialize.Inclusion.NON_EMPTY)

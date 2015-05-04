@@ -1,9 +1,10 @@
-!name     : $weather.name
-!id       : $weather.id
-!source   : $weather.source
-!site     : $weather.site
-!dist     : $weather.dist
-!elevation: $weather.elevation
+!name      : $weather.name
+!id        : $weather.id
+!source    : $weather.source
+!site      : $weather.site
+!dist      : $weather.dist
+!climate   : $weather.climateId
+!elevation : $weather.elevation
 
 latitude = $weather.latitude
 longitude = $weather.longitude

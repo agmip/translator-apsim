@@ -5,7 +5,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.agmip.translators.apsim.util.DateSerializer;
 import org.agmip.translators.apsim.util.Util;
 import org.codehaus.jackson.JsonGenerator;
 import org.codehaus.jackson.JsonParser;
@@ -34,7 +33,7 @@ public class DailyWeather {
     // date
     @JsonProperty("w_date")
     @JsonDeserialize(using=DailyWeatherDeserializer.class)
-    @JsonSerialize(using=DateSerializer.class,include=JsonSerialize.Inclusion.NON_DEFAULT)
+    @JsonSerialize(using=DailyWeatherSerializer.class,include=JsonSerialize.Inclusion.NON_DEFAULT)
     private String date ="1000/01/01";
     public String getDate() { return date; }
     public void setDate(String value) {date = value;}
@@ -134,6 +133,7 @@ public class DailyWeather {
             
             String formattedDate="";
             try {
+                date = date.replaceAll("[ ]+", " ");
                 formattedDate = agmip.format(apsimWeather.parse(date));
             } catch (ParseException e) {
                 throw new IOException(e);
