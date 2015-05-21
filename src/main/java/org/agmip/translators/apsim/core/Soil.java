@@ -236,6 +236,16 @@ public class Soil {
     @JsonIgnore
     private String log;
     public String getLog() { return log; }
+
+    // Return an array of KS values.
+    public double[] getKS() {
+    	double[] KS = new double[layers.length];
+    	for (int i = 0; i < layers.length; i++) {
+    		KS[i] = layers[i].getKsat();
+    	}
+    	
+    	return KS;
+    }
     
     
     

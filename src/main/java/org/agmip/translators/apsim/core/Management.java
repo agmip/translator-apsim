@@ -1,5 +1,6 @@
 package org.agmip.translators.apsim.core;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -24,11 +25,15 @@ public class Management {
     // log
     private String log = "";
     public String getLog() { return log; }
-    
+     
     // events
     private List<Event> events;
     public List<Event> getEvents() { return events; }
-        
+
+    // scripts
+    private ArrayList<String> scripts;
+    public ArrayList<String> getScripts() { return scripts; }
+    
     // return the crop being planted
     public String plantingCropName() {
         for (int i = 0; i < events.size(); i++) {
@@ -46,12 +51,11 @@ public class Management {
     private double bundHeight = Util.missingValue;
     public double getBundHeight() { return bundHeight;}
     public void setBundHeight(double height) { bundHeight = height; }
-    
-    
-    
-    
+       
     // default constructor - needed for Jackson
-    public Management() {}
+    public Management() {
+    	scripts = new ArrayList<String>();
+    }
     
     
     Comparator<Event> eventComparator = new Comparator<Event>() {
@@ -66,7 +70,7 @@ public class Management {
     };    
     
     // initialise this instance
-    public void initialise() {
+    public void initialise(Soil soil) {
     	
         // Special handling for irrigation with operation code of IR008, IR009 and IR010
         int size = events.size();
@@ -74,12 +78,41 @@ public class Management {
             if (events.get(i) instanceof Irrigation) {
                 Irrigation ir = (Irrigation) events.get(i);
                 if (("IR008").equals(ir.getMethod())) {
-                    // Might add another SetVariableEvent for percolation rate (KS)
+                	// Get an array of KS values.
+                	double[] KS = soil.getKS();
+                	
+                	if (KS.length == 0)
+                		log += events.get(i).getLog();
+                	else {
+	                	// Set the KS in layer 2.
+	                	KS[1] = ir.getAmount();
+	                	
+	                	// Convert the KS array into a string.
+	                	String ksString = Double.toString(KS[0]);
+	                	for (int j = 1; j < KS.length; j++) {
+	                		ksString += "  " + Double.toString(KS[j]);
+	                	}
+	                	
+	                    events.add(new SetVariableEvent(ir.getDate(),
+	                            "Soil Water",
+	                            "KS",
+	                            ksString));
+                	}
                 } else if (("IR009").equals(ir.getMethod())) {
                     events.add(new SetVariableEvent(ir.getDate(),
                             "Soil Water",
                             "max_pond",
                             String.valueOf(ir.getAmount())));
+                    bundHeight = ir.getAmount();
+                } else if (("IR011").equals(ir.getMethod())) {
+                	// minimum irrigation level.
+                	String script =
+                	 "      if (Pond < " + ir.getAmount() + ")\n" +
+                     "      {\n" +
+                     "         float amount = " + bundHeight + "f - Pond;\n" +
+                     "         Irrigation.Apply(amount, 0, 0, 0, \"\", new string[0], 0, 0, 0, 0, 0);\n" +
+                     "      }\n";
+                     scripts.add(script);                    
                 } else if (("IR010").equals(ir.getMethod())) {
                     // Might add another SetVariableEvent for plow-pan depth
                 }

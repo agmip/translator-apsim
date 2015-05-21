@@ -137,4 +137,16 @@ public class ApsimWriterTests extends TestCase{
         assertEquals(files.get(0), "Cotton.apsim");
     }     
     
+    @Test
+    public void testWriteRicePaddyComplete() throws Exception {
+    	ACE ace = fileResourceToACE("/json-samples/RicePaddy.json");
+
+        ArrayList<String> files = new ArrayList<String>();
+        ApsimWriter.generateAPSIMFile("RicePaddy.apsim", outputPath, ace, files);
+        ApsimWriter.generateMetFiles(outputPath, ace, files);
+        
+        assertEquals(files.size(), 2);
+        assertEquals(files.get(0), "RicePaddy.apsim");
+    }      
+    
 }

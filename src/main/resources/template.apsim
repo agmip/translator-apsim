@@ -302,6 +302,33 @@ endif
 </text><event>end_of_day</event></script>
                 </manager>
 #end
+
+         <manager2 name="Other">
+            <text><![CDATA[
+using System;
+using ModelFramework;
+using CSGeneral;
+
+public class Script 
+{      
+   [Link] Paddock MyPaddock; 
+   [Link] Irrigation Irrigation;
+   [Input] DateTime Today;
+   [Input] float Pond;
+   
+   // The following event handler will be called each day at the beginning of the day
+   [EventHandler] public void OnPrepare()
+   {
+
+#foreach ($script in $simulation.management.scripts)        
+$script
+#end      
+   }
+   
+}
+            ]]></text>
+         </manager2> 
+
 			</folder>
 			<outputfile>
 				<filename output="yes">AgMIP.out</filename>

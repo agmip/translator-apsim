@@ -174,7 +174,7 @@ public class Simulation {
         if (management == null)
             log += "  * Operations ERROR: Missing all management events.\r\n";
         else {
-            management.initialise();
+            management.initialise(soil);
             log += management.getLog();
         }
     }
