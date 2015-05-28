@@ -1,5 +1,7 @@
 package org.agmip.translators.apsim.core;
 
+import java.util.List;
+
 import org.agmip.translators.apsim.util.DateDeserializer;
 import org.agmip.translators.apsim.util.DateSerializer;
 import org.agmip.translators.apsim.util.Util;
@@ -123,8 +125,15 @@ public class Simulation {
     private String log;
     public String getLog() { return log; }
     
-
-
+    // adjustments
+    @JsonIgnore
+    private List<Adjustment> adjustments;
+    public List<Adjustment> getAdjustments() {
+    	return adjustments;
+    }
+    public void setAdjustments(List<Adjustment> adjustments) {
+    	this.adjustments = adjustments;
+    }
    
     
     // Default constructor - Needed for Jackson

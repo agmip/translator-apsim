@@ -90,7 +90,7 @@ public class ApsimWriterTests extends TestCase{
     }    
     
     @Test
-    public void testWriteSugarComplete() throws Exception {
+    public void testWriteSugarComplete() throws Exception { 
     	ACE ace = fileResourceToACE("/json-samples/Sugar.json");
 
         ArrayList<String> files = new ArrayList<String>();
@@ -148,5 +148,17 @@ public class ApsimWriterTests extends TestCase{
         assertEquals(files.size(), 2);
         assertEquals(files.get(0), "RicePaddy.apsim");
     }      
+    
+    @Test
+    public void testWriteAdjustments() throws Exception {
+    	ACE ace = fileResourceToACE("/json-samples/Adjustments.json");
+
+        ArrayList<String> files = new ArrayList<String>();
+        ApsimWriter.generateAPSIMFile("Adjustments.apsim", outputPath, ace, files);
+        ApsimWriter.generateMetFiles(outputPath, ace, files);
+        
+        assertEquals(files.size(), 2);
+        assertEquals(files.get(0), "Adjustments.apsim");
+    }  
     
 }

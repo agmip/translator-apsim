@@ -78,41 +78,11 @@ public class Management {
             if (events.get(i) instanceof Irrigation) {
                 Irrigation ir = (Irrigation) events.get(i);
                 if (("IR008").equals(ir.getMethod())) {
-                	// Get an array of KS values.
-                	double[] KS = soil.getKS();
-                	
-                	if (KS.length == 0)
-                		log += events.get(i).getLog();
-                	else {
-	                	// Set the KS in layer 2.
-	                	KS[1] = ir.getAmount();
-	                	
-	                	// Convert the KS array into a string.
-	                	String ksString = Double.toString(KS[0]);
-	                	for (int j = 1; j < KS.length; j++) {
-	                		ksString += "  " + Double.toString(KS[j]);
-	                	}
-	                	
-	                    events.add(new SetVariableEvent(ir.getDate(),
-	                            "Soil Water",
-	                            "KS",
-	                            ksString));
-                	}
+                	addSetKSEvent(soil, i, ir);
                 } else if (("IR009").equals(ir.getMethod())) {
-                    events.add(new SetVariableEvent(ir.getDate(),
-                            "Soil Water",
-                            "max_pond",
-                            String.valueOf(ir.getAmount())));
-                    bundHeight = ir.getAmount();
+                    addSetMaxPondEvent(ir);
                 } else if (("IR011").equals(ir.getMethod())) {
-                	// minimum irrigation level.
-                	String script =
-                	 "      if (Pond < " + ir.getAmount() + ")\n" +
-                     "      {\n" +
-                     "         float amount = " + bundHeight + "f - Pond;\n" +
-                     "         Irrigation.Apply(amount, 0, 0, 0, \"\", new string[0], 0, 0, 0, 0, 0);\n" +
-                     "      }\n";
-                     scripts.add(script);                    
+                	addMinimumIrrigationEvent(ir);                    
                 } else if (("IR010").equals(ir.getMethod())) {
                     // Might add another SetVariableEvent for plow-pan depth
                 }
@@ -146,10 +116,47 @@ public class Management {
         			                        String.valueOf(bundHeight)));
         }
         
-        
-
-        
         // sort the events into date order.
         Collections.sort(events, eventComparator);
     }
+
+	private void addSetMaxPondEvent(Irrigation ir) {
+		events.add(new SetVariableEvent(ir.getDate(),
+		        "Soil Water",
+		        "max_pond",
+		        String.valueOf(ir.getAmount())));
+		bundHeight = ir.getAmount();
+	}
+
+	private void addSetKSEvent(Soil soil, int i, Irrigation ir) {
+		// Get an array of KS values.
+		double[] KS = soil.getKS();
+		
+		if (KS.length == 0)
+			log += events.get(i).getLog();
+		else {
+			// Set the KS in layer 2.
+			KS[1] = ir.getAmount();
+			
+			// Convert the KS array into a string.
+			String ksString = Double.toString(KS[0]);
+			for (int j = 1; j < KS.length; j++) {
+				ksString += "  " + Double.toString(KS[j]);
+			}
+			
+		    events.add(new SetVariableEvent(ir.getDate(),
+		            "Soil Water",
+		            "KS",
+		            ksString));
+		}
+	}
+	
+	private void addMinimumIrrigationEvent(Irrigation ir) {
+		// minimum irrigation level.
+	    events.add(new SetVariableEvent(ir.getDate(),
+	            "AutoIrrigator",
+	            "MinPond",
+	            String.valueOf(ir.getAmount())));
+	}
+	
 }

@@ -130,6 +130,28 @@ $simulation.log
 		<metfile name="met">
 			<filename name="filename" input="yes">${simulation.weather.name}.met</filename>
 		</metfile>
+        <manager2 name="Adjustments">
+            <text><![CDATA[
+using System;
+using ModelFramework;
+using CSGeneral;
+using System.Globalization;
+
+public class Script 
+{      
+   [Input] DateTime Today;
+   [Input(IsOptional=true)] double co2;
+   
+   // The following event handler will be called at the beginning of each day.
+   [EventHandler] public void OnPrenewmet(NewMetType met)
+   {
+#foreach ($adjustment in $simulation.adjustments)        
+$adjustment.managerScript
+#end   
+   }
+}
+            ]]></text>
+         </manager2> 
 		<summaryfile />
 		<area name="paddock">
 			<soil name="Soil" shortcut="/simulations/Soils/$simulation.soil.id">
@@ -303,28 +325,29 @@ endif
                 </manager>
 #end
 
-         <manager2 name="Other">
+         <manager2 name="AutoIrrigator">
             <text><![CDATA[
 using System;
 using ModelFramework;
 using CSGeneral;
-
+ 
 public class Script 
 {      
    [Link] Paddock MyPaddock; 
    [Link] Irrigation Irrigation;
    [Input] DateTime Today;
    [Input] float Pond;
+   [Output] public float MinPond { get; set; }
    
    // The following event handler will be called each day at the beginning of the day
    [EventHandler] public void OnPrepare()
    {
-
-#foreach ($script in $simulation.management.scripts)        
-$script
-#end      
+   if (Pond < MinPond)
+      {
+      float amount = MinPond - Pond;
+      Irrigation.Apply(amount, 0, 0, 0, "", new string[0], 0, 0, 0, 0, 0);
+      }    
    }
-   
 }
             ]]></text>
          </manager2> 

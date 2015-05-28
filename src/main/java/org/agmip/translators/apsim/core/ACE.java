@@ -30,6 +30,14 @@ public class ACE {
 	public void setExperiments(List<Simulation> experiments) {
 		this.experiments = experiments;
 	}
+	
+	// adjustments
+	@JsonProperty("adjustments")
+	List<Adjustment> adjustments = new Vector<Adjustment>();
+	public List<Adjustment> getAdjustments() { return adjustments; }
+	public void Adjustments(List<Adjustment> adjustments) {
+		this.adjustments = adjustments;
+	}
 
 	// initialise this object
 	public void initialise() throws Exception{
@@ -38,7 +46,7 @@ public class ACE {
 		for(Soil soil:soils)
 			soil.initialise();
 		
-		// For each experiment, give it the corresponding soil and climate.
+		// For each experiment, give it the corresponding soil, climate and any adjustments.
 		if (experiments != null) {
 			for(Simulation sim:experiments){
 				String mySoil = sim.getSoilID();
@@ -57,7 +65,10 @@ public class ACE {
 						sim.setWeather(w); break;
 					}
 				}
-	
+				
+				if (adjustments != null)
+					sim.setAdjustments(adjustments);
+				
 				sim.initialise();
 			}
 		}
