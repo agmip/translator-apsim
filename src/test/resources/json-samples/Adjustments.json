@@ -185,7 +185,7 @@
        },
        {
         "variable": "co2y",
-        "method": "sub",
+        "method": "substitute",
         "startdate": "0000-01-01",
         "enddate": "0000-01-01",
         "value": "600"

@@ -94,7 +94,7 @@ public class Adjustment {
     	String operator = "?";
     	if (method.equals("delta")) operator = " += ";
     	else if (method.equals("multiply")) operator = " *= ";
-    	else if (method.equals("sub")) operator = " = ";
+    	else if (method.equals("substitute")) operator = " = ";
     	
     	script += indent + variable + operator + value + "F;\n";
     	
