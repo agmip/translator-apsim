@@ -16,6 +16,7 @@ public class Util {
 
     public static final SimpleDateFormat agmip = new SimpleDateFormat("yyyyMMdd");
     public static final SimpleDateFormat apsim = new SimpleDateFormat("dd/MM/yyyy");
+    public static final SimpleDateFormat apsimYMD = new SimpleDateFormat("yyyy-MM-dd");
     public static final double missingValue = -99.999;
       
     public static String GetYear(String agmipDate) throws ParseException {
@@ -40,6 +41,12 @@ public class Util {
 
     public static String toApsimDateString(Calendar date) throws ParseException {
         return apsim.format(date.getTime());
+    }
+    
+    public static String toApsimYMDFromAgmipYMD(String agmipYMD) throws ParseException {
+    	Calendar c = Calendar.getInstance();
+        c.setTime(agmip.parse(agmipYMD));
+        return apsimYMD.format(c.getTime());
     }
     
     // static helper function for converting a crop code to a crop name.

@@ -71,7 +71,7 @@ public class ApsimWriter implements TranslatorOutput {
            
             if (ace.getSoils().size() > 0 || ace.getExperiments().size() > 0) {
                 generateAPSIMFile("AgMip.apsim", path, ace, files);
-                generateBatchFile(new String[]{"74", "75"}, path, ace, files);
+                generateBatchFile(new String[]{"74", "75", "77"}, path, ace, files);
             }
                 
 			

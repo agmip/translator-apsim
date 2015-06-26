@@ -1,5 +1,7 @@
 package org.agmip.translators.apsim.core;
 
+import java.text.ParseException;
+import org.agmip.translators.apsim.util.Util;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
@@ -12,7 +14,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Adjustment {
-
+   
 	// id
 	@JsonSerialize(include = JsonSerialize.Inclusion.NON_DEFAULT)
 	@JsonProperty("variable")
@@ -74,7 +76,7 @@ public class Adjustment {
 		this.value = value;
 	}
 
-	public String getManagerScript() {
+	public String getManagerScript() throws ParseException {
     	// convert AgMIP variable names to APSIM.
     	if (variable.equals("tmax")) variable = "met.maxt";
     	if (variable.equals("tmin")) variable = "met.mint";
@@ -84,10 +86,10 @@ public class Adjustment {
     	// Write some APSIM manager script.		
 		String script = "";
 		String indent = "      ";
-    	if (!startdate.equals("0000-01-01") && !enddate.equals("0000-01-01")) {
-    		script = "      if (DateUtility.WithinDates(DateTime.ParseExact(\"" + startdate + "\", \"yyyy-M-d\", CultureInfo.InvariantCulture),\n"
+    	if (!startdate.equals("") && !enddate.equals("")) {
+    		script = "      if (DateUtility.WithinDates(DateTime.ParseExact(\"" + Util.toApsimYMDFromAgmipYMD(startdate) + "\", \"yyyy-M-d\", CultureInfo.InvariantCulture),\n"
      			   + "                                  Today,\n"
-    			   + "                                  DateTime.ParseExact(\"" + enddate + "\", \"yyyy-M-d\", CultureInfo.InvariantCulture)))\n";
+    			   + "                                  DateTime.ParseExact(\"" + Util.toApsimYMDFromAgmipYMD(enddate) + "\", \"yyyy-M-d\", CultureInfo.InvariantCulture)))\n";
     		indent = "         ";
     	}
     	

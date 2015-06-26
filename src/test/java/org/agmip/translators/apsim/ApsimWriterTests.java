@@ -150,15 +150,15 @@ public class ApsimWriterTests extends TestCase{
     }      
     
     @Test
-    public void testWriteAdjustments() throws Exception {
-    	ACE ace = fileResourceToACE("/json-samples/Adjustments.json");
+    public void testWriteAdjustments2() throws Exception {
+    	ACE ace = fileResourceToACE("/json-samples/Survey_data-Machakos-MAZ-0XFX-seasonal_strategy.json");
 
         ArrayList<String> files = new ArrayList<String>();
-        ApsimWriter.generateAPSIMFile("Adjustments.apsim", outputPath, ace, files);
+        ApsimWriter.generateAPSIMFile("Survey_data-Machakos-MAZ-0XFX-seasonal_strategy.apsim", outputPath, ace, files);
         ApsimWriter.generateMetFiles(outputPath, ace, files);
         
-        assertEquals(files.size(), 2);
-        assertEquals(files.get(0), "Adjustments.apsim");
-    }  
+        assertEquals(files.size(), 5);
+        assertEquals(files.get(0), "Survey_data-Machakos-MAZ-0XFX-seasonal_strategy.apsim");
+    } 
     
 }

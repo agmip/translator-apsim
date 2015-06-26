@@ -30,14 +30,6 @@ public class ACE {
 	public void setExperiments(List<Simulation> experiments) {
 		this.experiments = experiments;
 	}
-	
-	// adjustments
-	@JsonProperty("adjustments")
-	List<Adjustment> adjustments = new Vector<Adjustment>();
-	public List<Adjustment> getAdjustments() { return adjustments; }
-	public void Adjustments(List<Adjustment> adjustments) {
-		this.adjustments = adjustments;
-	}
 
 	// initialise this object
 	public void initialise() throws Exception{
@@ -65,9 +57,6 @@ public class ACE {
 						sim.setWeather(w); break;
 					}
 				}
-				
-				if (adjustments != null)
-					sim.setAdjustments(adjustments);
 				
 				sim.initialise();
 			}

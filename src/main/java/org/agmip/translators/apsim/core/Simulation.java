@@ -126,8 +126,8 @@ public class Simulation {
     public String getLog() { return log; }
     
     // adjustments
-    @JsonIgnore
-    private List<Adjustment> adjustments;
+    @JsonProperty("adjustments")
+	private List<Adjustment> adjustments;
     public List<Adjustment> getAdjustments() {
     	return adjustments;
     }
