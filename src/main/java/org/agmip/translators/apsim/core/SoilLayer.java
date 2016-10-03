@@ -16,6 +16,7 @@ public class SoilLayer {
     // bottomDepth
     @JsonProperty("sllb")
     private double bottomDepth = Util.missingValue;
+    public double getBottomDepth() { return bottomDepth; }
 	public void setBottomDepth(double bottomDepth) {
 		this.bottomDepth = bottomDepth;
 	}
@@ -91,18 +92,30 @@ public class SoilLayer {
     @JsonProperty("slfac")
     private double biomCFraction = Util.missingValue;
     public double getFbiom() {
+        double slic = getInertC();
         if (biomCFraction != Util.missingValue) {
             return biomCFraction;
-        } else if (organicCarbon == 0) {
+        } else if (organicCarbon == Util.missingValue || getInertC() == Util.missingValue || biomC == Util.missingValue) {
+            return Util.missingValue;
+        } else if (organicCarbon == 0 || organicCarbon - getInertC() == 0) {
             return 0;
         } else {
-            return biomC / organicCarbon;
-        } 
+            return biomC / (organicCarbon - slic);
+        }
      }
     
     // finert
     @JsonProperty("slic")
     private double inertC = Util.missingValue;
+    public double getInertC() {
+        if (inertC != Util.missingValue) {
+            return inertC;
+        } else if (getFinert() == Util.missingValue || organicCarbon == Util.missingValue) {
+            return Util.missingValue;
+        } else {
+            return organicCarbon * getFinert(); 
+    	}
+    }
     @JsonProperty("slfic")
     private double inertCFraction = Util.missingValue;
     public double getFinert() {
@@ -110,9 +123,11 @@ public class SoilLayer {
             return inertCFraction;
         } else if (organicCarbon == 0) {
             return 0;
-        } else {
-            return inertC / organicCarbon; 
-    	}
+        } else if (inertC == Util.missingValue || organicCarbon == Util.missingValue) {
+            return Util.missingValue; 
+    	} else {
+            return inertC / organicCarbon;
+        }
     }
 
     // ks
@@ -134,7 +149,7 @@ public class SoilLayer {
 	}    
     
     // xf
-    @JsonProperty("slrgf")
+    @JsonProperty("slxf")
     private double xf = Util.missingValue;
     public double getXf() { return xf; }
     public void setXf(double xf) {
@@ -183,13 +198,15 @@ public class SoilLayer {
         if (kl == Util.missingValue)
             log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing KL (apsim_kl).\r\n";
         
-        if (xf == Util.missingValue)
-            log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing XF (slrgf).\r\n";
+        if (xf == Util.missingValue) {
+            log += "  * Soil layer " + String.valueOf(layerNumber) + " WARN: Missing XF (slxf), use 1 as default.\r\n";
+            xf = 1;
+        }
 
-        if (biomC == Util.missingValue && biomCFraction == Util.missingValue)
-            log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing FBIOM (both slacc and slfac).\r\n";
+        if (getFbiom() == Util.missingValue)
+            log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing FBIOM (all slacc and slfac and slic).\r\n";
         
-        if (inertC == Util.missingValue && inertCFraction == Util.missingValue)
+        if (getFinert() == Util.missingValue)
             log += "  * Soil layer " + String.valueOf(layerNumber) + " ERROR: Missing InertC (both slic and slfic).\r\n";
         
         thickness = bottomDepth * 10 - cumThickness;

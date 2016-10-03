@@ -44,7 +44,7 @@ public class ApsimWriterTests extends TestCase{
 
         ArrayList<String> files = new ArrayList<String>();
         ApsimWriter.generateAPSIMFile("MaizeIncomplete.apsim", outputPath, ace, files);
-        ApsimWriter.generateMetFiles(outputPath, ace, files);
+        ApsimWriter.generateMetFiles(outputPath, ace.getWeathers(), files);
         
         assertEquals(files.size(), 2);
         assertEquals(files.get(0), "MaizeIncomplete.apsim");
@@ -57,7 +57,7 @@ public class ApsimWriterTests extends TestCase{
 
         ArrayList<String> files = new ArrayList<String>();
         ApsimWriter.generateAPSIMFile("Maize.apsim", outputPath, ace, files);
-        ApsimWriter.generateMetFiles(outputPath, ace, files);
+        ApsimWriter.generateMetFiles(outputPath, ace.getWeathers(), files);
         
         assertEquals(files.size(), 2);
         assertEquals(files.get(0), "Maize.apsim");
@@ -70,7 +70,7 @@ public class ApsimWriterTests extends TestCase{
 
         ArrayList<String> files = new ArrayList<String>();
         ApsimWriter.generateAPSIMFile("Wheat.apsim", outputPath, ace, files);
-        ApsimWriter.generateMetFiles(outputPath, ace, files);
+        ApsimWriter.generateMetFiles(outputPath, ace.getWeathers(), files);
         
         assertEquals(files.size(), 2);
         assertEquals(files.get(0), "Wheat.apsim");
@@ -83,7 +83,7 @@ public class ApsimWriterTests extends TestCase{
 
         ArrayList<String> files = new ArrayList<String>();
         ApsimWriter.generateAPSIMFile("Sorghum.apsim", outputPath, ace, files);
-        ApsimWriter.generateMetFiles(outputPath, ace, files);
+        ApsimWriter.generateMetFiles(outputPath, ace.getWeathers(), files);
         
         assertEquals(files.size(), 3);
         assertEquals(files.get(0), "Sorghum.apsim");
@@ -95,7 +95,7 @@ public class ApsimWriterTests extends TestCase{
 
         ArrayList<String> files = new ArrayList<String>();
         ApsimWriter.generateAPSIMFile("Sugar.apsim", outputPath, ace, files);
-        ApsimWriter.generateMetFiles(outputPath, ace, files);
+        ApsimWriter.generateMetFiles(outputPath, ace.getWeathers(), files);
         
         assertEquals(files.size(), 2);
         assertEquals(files.get(0), "Sugar.apsim");
@@ -107,7 +107,7 @@ public class ApsimWriterTests extends TestCase{
 
         ArrayList<String> files = new ArrayList<String>();
         ApsimWriter.generateAPSIMFile("Millet.apsim", outputPath, ace, files);
-        ApsimWriter.generateMetFiles(outputPath, ace, files);
+        ApsimWriter.generateMetFiles(outputPath, ace.getWeathers(), files);
         
         assertEquals(files.size(), 2);
         assertEquals(files.get(0), "Millet.apsim");
@@ -119,7 +119,7 @@ public class ApsimWriterTests extends TestCase{
 
         ArrayList<String> files = new ArrayList<String>();
         ApsimWriter.generateAPSIMFile("RicePaddySample.apsim", outputPath, ace, files);
-        ApsimWriter.generateMetFiles(outputPath, ace, files);
+        ApsimWriter.generateMetFiles(outputPath, ace.getWeathers(), files);
         
         assertEquals(files.size(), 2);
         assertEquals(files.get(0), "RicePaddySample.apsim");
@@ -131,7 +131,7 @@ public class ApsimWriterTests extends TestCase{
 
         ArrayList<String> files = new ArrayList<String>();
         ApsimWriter.generateAPSIMFile("Cotton.apsim", outputPath, ace, files);
-        ApsimWriter.generateMetFiles(outputPath, ace, files);
+        ApsimWriter.generateMetFiles(outputPath, ace.getWeathers(), files);
         
         assertEquals(files.size(), 2);
         assertEquals(files.get(0), "Cotton.apsim");

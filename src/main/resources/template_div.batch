@@ -3,7 +3,9 @@
 if exist "$apsimDir" (
   if exist ${crop}.xml (
     echo Run APSIM...
-    "${apsimDir}${apsimExe}" AgMip.apsim
+    #foreach ($apsimFile in $apsimFiles)
+      "${apsimDir}${apsimExe}" ${apsimFile}.apsim
+    #end
     echo done!
   ) else (
     echo Copy model file into working directory...
@@ -11,13 +13,17 @@ if exist "$apsimDir" (
       copy ${model}.xml ${crop}.xml
       echo done!
       echo Run APSIM...
-      "${apsimDir}${apsimExe}" AgMip.apsim
+      #foreach ($apsimFile in $apsimFiles)
+        "${apsimDir}${apsimExe}" ${apsimFile}.apsim
+      #end
       echo done!
     ) else if exist "${apsimDir}${model}.xml" (
       copy "${apsimDir}${model}.xml" ${crop}.xml
       echo done!
       echo Run APSIM...
-      "${apsimDir}${apsimExe}" AgMip.apsim
+      #foreach ($apsimFile in $apsimFiles)
+        "${apsimDir}${apsimExe}" ${apsimFile}.apsim
+      #end
       echo done!
     ) else (
       echo Failed! Crop file is missing!

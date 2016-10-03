@@ -173,7 +173,7 @@ public class Planting extends Event{
     			return "$cropName sow cultivar = $cultivar, establishment = transplant, nplsb = $numPlantsInSeedbed, nplh  = $plantsPerHill, sbdur = $ageOfTransplant, nh = $numberOfHills";
     	}
     	else if (cropName.equals("cotton"))
-    		return "$cropName sow plants_pm = $population, cultivar = $cultivar, sowing_depth = $depth (mm), row_spacing = $row_spacing (mm), skiprow = 1";
+    		return "$cropName sow plants_pm = $population, cultivar = $cultivar, sowing_depth = $depth (mm), row_spacing = $row_spacing (mm), skiprow = 0";
     	else
     		// Plant based crops
     		return "$cropName sow plants = $population, sowing_depth = $depth (mm), cultivar = $cultivar, row_spacing = $row_spacing (mm), crop_class = plant";
